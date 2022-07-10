@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8e32976-0bd1-4687-8b27-0cc53bde177f" name="Changes" comment="тест Pycharm обновленный">
+    <list default="true" id="b8e32976-0bd1-4687-8b27-0cc53bde177f" name="Changes" comment="тест Pycharm 2 задание вспомогательные методы">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_add_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_add_group.py" afterDir="false" />
     </list>
@@ -111,7 +111,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656879968352</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="тест Pycharm 2 задание вспомогательные методы">
+      <created>1657447595734</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1657447595734</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -131,6 +138,7 @@
     <MESSAGE value="тест Pycharm" />
     <MESSAGE value="тест Pycharm 2" />
     <MESSAGE value="тест Pycharm обновленный" />
-    <option name="LAST_COMMIT_MESSAGE" value="тест Pycharm обновленный" />
+    <MESSAGE value="тест Pycharm 2 задание вспомогательные методы" />
+    <option name="LAST_COMMIT_MESSAGE" value="тест Pycharm 2 задание вспомогательные методы" />
   </component>
 </project>
