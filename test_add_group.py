@@ -20,7 +20,7 @@ class UntitledTestCase(unittest.TestCase):
         self.open_home_page(driver)
         self.login(driver, username="admin", password="secret")
         self.open_groups_page(driver)
-        self.create_group(driver,name="2055", header=hea, footer="1")
+        self.create_group(driver,name="2055", header="hea", footer="1")
         self.return_to_groups_page(driver)
         self.logout(driver)
 

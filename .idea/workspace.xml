@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8e32976-0bd1-4687-8b27-0cc53bde177f" name="Changes" comment="тест Pycharm обновленный">
+    <list default="true" id="b8e32976-0bd1-4687-8b27-0cc53bde177f" name="Changes" comment="задание 2 вспом. методы и передача параметров в методы.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_add_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_add_group.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +156,21 @@
       <option name="project" value="LOCAL" />
       <updated>1656879968352</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="тест рабочий 12/07">
+      <created>1657649676962</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1657649676962</updated>
+    </task>
+    <task id="LOCAL-00008" summary="задание 2 вспом. методы и передача параметров в методы.">
+      <created>1657815564495</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1657815564495</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -175,6 +190,8 @@
     <MESSAGE value="тест Pycharm" />
     <MESSAGE value="тест Pycharm 2" />
     <MESSAGE value="тест Pycharm обновленный" />
-    <option name="LAST_COMMIT_MESSAGE" value="тест Pycharm обновленный" />
+    <MESSAGE value="тест рабочий 12/07" />
+    <MESSAGE value="задание 2 вспом. методы и передача параметров в методы." />
+    <option name="LAST_COMMIT_MESSAGE" value="задание 2 вспом. методы и передача параметров в методы." />
   </component>
 </project>
