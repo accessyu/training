@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8e32976-0bd1-4687-8b27-0cc53bde177f" name="Changes" comment="задание 4 фикстура">
+    <list default="true" id="b8e32976-0bd1-4687-8b27-0cc53bde177f" name="Changes" comment="задание 4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application.py" beforeDir="false" afterPath="$PROJECT_DIR$/application.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2application.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_add_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_add_group.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +45,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="Python tests.pytest in 6test_add_group.py">
+  <component name="RunManager" selected="Python tests.pytest in test_add_group.py">
     <configuration name="test_add_group" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="training" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -132,8 +133,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.pytest in 6test_add_group.py" />
         <item itemvalue="Python tests.pytest in test_add_group.py" />
+        <item itemvalue="Python tests.pytest in 6test_add_group.py" />
         <item itemvalue="Python tests.pytest in 4test_add_group.py" />
         <item itemvalue="Python tests.pytest in 2UntitledTestCase.py" />
       </list>
@@ -232,7 +233,21 @@
       <option name="project" value="LOCAL" />
       <updated>1657972926673</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="задание 4">
+      <created>1657976973587</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1657976973588</updated>
+    </task>
+    <task id="LOCAL-00014" summary="задание 4">
+      <created>1657978385507</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1657978385507</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -255,6 +270,7 @@
     <MESSAGE value="тест рабочий 12/07" />
     <MESSAGE value="задание 2 вспом. методы и передача параметров в методы." />
     <MESSAGE value="задание 4 фикстура" />
-    <option name="LAST_COMMIT_MESSAGE" value="задание 4 фикстура" />
+    <MESSAGE value="задание 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="задание 4" />
   </component>
 </project>
