@@ -24,20 +24,20 @@ class Application:
         wd = self.wd
         wd.find_element_by_link_text("groups").click()
 
-    def create_group(self, name, header, footer):
+    def create_group(self, grp):
         wd = self.wd
         # init group creation
         wd.find_element_by_name("new").click()
         wd.find_element_by_name("group_name").click()
         wd.find_element_by_name("group_name").clear()
         # fill group form
-        wd.find_element_by_name("group_name").send_keys(name)
+        wd.find_element_by_name("group_name").send_keys(grp.name)
         wd.find_element_by_name("group_header").click()
         wd.find_element_by_name("group_header").clear()
-        wd.find_element_by_name("group_header").send_keys(header)
+        wd.find_element_by_name("group_header").send_keys(grp.header)
         wd.find_element_by_name("group_footer").click()
         wd.find_element_by_name("group_footer").clear()
-        wd.find_element_by_name("group_footer").send_keys(footer)
+        wd.find_element_by_name("group_footer").send_keys(grp.footer)
         # submit group creation
         wd.find_element_by_name("submit").click()
 
