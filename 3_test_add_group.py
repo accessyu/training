@@ -28,9 +28,12 @@ class UntitledTestCase(unittest.TestCase):
         driver.find_element_by_name("pass").clear()
         driver.find_element_by_name("pass").send_keys("secret")
         driver.find_element_by_xpath("//input[@value='Login']").click()
+        # open contact page
         driver.find_element_by_link_text("add new").click()
+        # init contact creation
         driver.find_element_by_name("firstname").click()
         driver.find_element_by_name("firstname").clear()
+        # fill group firm
         driver.find_element_by_name("firstname").send_keys("1")
         driver.find_element_by_name("middlename").click()
         driver.find_element_by_name("middlename").clear()
@@ -84,6 +87,7 @@ class UntitledTestCase(unittest.TestCase):
         driver.find_element_by_name("notes").clear()
         driver.find_element_by_name("notes").send_keys("2")
         driver.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
+        # return to home page
         driver.find_element_by_link_text("home page").click()
         # logout
         driver.find_element_by_link_text("Logout").click()
