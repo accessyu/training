@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8e32976-0bd1-4687-8b27-0cc53bde177f" name="Changes" comment="задание 3">
+    <list default="true" id="b8e32976-0bd1-4687-8b27-0cc53bde177f" name="Changes" comment="задание 3 добавлены вспомогательные методы.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/3_test_add_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/3_test_add_group.py" afterDir="false" />
     </list>
@@ -298,7 +298,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658168147045</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="задание 3 добавлены вспомогательные методы.">
+      <created>1658170215526</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1658170215526</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -325,6 +332,7 @@
     <MESSAGE value="задание 4, актуальная, последняя версия. перевести тесты с unittest на py.test и реализовать фиксутры." />
     <MESSAGE value="задание 3, запись через рекордер." />
     <MESSAGE value="задание 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="задание 3" />
+    <MESSAGE value="задание 3 добавлены вспомогательные методы." />
+    <option name="LAST_COMMIT_MESSAGE" value="задание 3 добавлены вспомогательные методы." />
   </component>
 </project>
