@@ -6,6 +6,7 @@ from selenium.webdriver.support.ui import Select
 from selenium.common.exceptions import NoSuchElementException
 from selenium.common.exceptions import NoAlertPresentException
 import unittest, time, re
+from contact import Contact
 
 class UntitledTestCase(unittest.TestCase):
     def setUp(self):
@@ -20,7 +21,7 @@ class UntitledTestCase(unittest.TestCase):
         self.open_home_page(driver)
         self.login(driver)
         self.open_contact_page(driver)
-        self.create_contact(driver)
+        self.create_contact(driver, Contact (firstname="", middlename="", lastname="", nickname="",title="",company="",address="",home="",mobile="",work="",fax="",email="",bday="",bmonth="",byear="",address2="",phone2="",notes=""))
         self.return_to_home_page(driver)
         self.logout(driver)
         driver.find_element_by_name("user").clear()
@@ -34,45 +35,45 @@ class UntitledTestCase(unittest.TestCase):
         # return to home page
         driver.find_element_by_link_text("home page").click()
 
-    def create_contact(self, driver):
+    def create_contact(self, driver, contact):
         # init contact creation
         driver.find_element_by_name("firstname").click()
         driver.find_element_by_name("firstname").clear()
         # fill contact firm
-        driver.find_element_by_name("firstname").send_keys("1")
+        driver.find_element_by_name("firstname").send_keys(contact.firstname)
         driver.find_element_by_name("middlename").click()
         driver.find_element_by_name("middlename").clear()
-        driver.find_element_by_name("middlename").send_keys("2")
+        driver.find_element_by_name("middlename").send_keys(contact.middlename)
         driver.find_element_by_name("lastname").click()
         driver.find_element_by_name("lastname").clear()
-        driver.find_element_by_name("lastname").send_keys("3")
+        driver.find_element_by_name("lastname").send_keys(contact.lastname)
         driver.find_element_by_name("nickname").click()
         driver.find_element_by_name("nickname").clear()
-        driver.find_element_by_name("nickname").send_keys("4")
+        driver.find_element_by_name("nickname").send_keys(contact.nickname)
         driver.find_element_by_name("title").click()
         driver.find_element_by_name("title").clear()
-        driver.find_element_by_name("title").send_keys("5")
+        driver.find_element_by_name("title").send_keys(contact.title)
         driver.find_element_by_name("company").click()
         driver.find_element_by_name("company").clear()
-        driver.find_element_by_name("company").send_keys("111")
+        driver.find_element_by_name("company").send_keys(contact.company)
         driver.find_element_by_name("address").click()
         driver.find_element_by_name("address").clear()
-        driver.find_element_by_name("address").send_keys("22222")
+        driver.find_element_by_name("address").send_keys(contact.address)
         driver.find_element_by_name("home").click()
         driver.find_element_by_name("home").clear()
-        driver.find_element_by_name("home").send_keys("asasa")
+        driver.find_element_by_name("home").send_keys(contact.home)
         driver.find_element_by_name("mobile").click()
         driver.find_element_by_name("mobile").clear()
-        driver.find_element_by_name("mobile").send_keys("121")
+        driver.find_element_by_name("mobile").send_keys(contact.mobile)
         driver.find_element_by_name("work").click()
         driver.find_element_by_name("work").clear()
-        driver.find_element_by_name("work").send_keys("11212")
+        driver.find_element_by_name("work").send_keys(contact.work)
         driver.find_element_by_name("fax").click()
         driver.find_element_by_name("fax").clear()
-        driver.find_element_by_name("fax").send_keys("111")
+        driver.find_element_by_name("fax").send_keys(contact.fax)
         driver.find_element_by_name("email").click()
         driver.find_element_by_name("email").clear()
-        driver.find_element_by_name("email").send_keys("1@mail.ru")
+        driver.find_element_by_name("email").send_keys(contact.email)
         driver.find_element_by_name("bday").click()
         Select(driver.find_element_by_name("bday")).select_by_visible_text("1")
         driver.find_element_by_xpath("//option[@value='1']").click()
@@ -81,16 +82,16 @@ class UntitledTestCase(unittest.TestCase):
         driver.find_element_by_xpath("//option[@value='January']").click()
         driver.find_element_by_name("byear").click()
         driver.find_element_by_name("byear").clear()
-        driver.find_element_by_name("byear").send_keys("1991")
+        driver.find_element_by_name("byear").send_keys(contact.byear)
         driver.find_element_by_name("address2").click()
         driver.find_element_by_name("address2").clear()
-        driver.find_element_by_name("address2").send_keys("1")
+        driver.find_element_by_name("address2").send_keys(contact.address2)
         driver.find_element_by_name("phone2").click()
         driver.find_element_by_name("phone2").clear()
-        driver.find_element_by_name("phone2").send_keys("1")
+        driver.find_element_by_name("phone2").send_keys(contact.phone2)
         driver.find_element_by_name("notes").click()
         driver.find_element_by_name("notes").clear()
-        driver.find_element_by_name("notes").send_keys("2")
+        driver.find_element_by_name("notes").send_keys(contact.notes)
         driver.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
 
     def open_contact_page(self, driver):
