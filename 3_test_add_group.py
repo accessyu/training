@@ -8,7 +8,7 @@ from selenium.common.exceptions import NoAlertPresentException
 import unittest, time, re
 from contact import Contact
 
-class UntitledTestCase(unittest.TestCase):
+class CreateContact(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Firefox()
         self.driver.implicitly_wait(30)
@@ -16,12 +16,12 @@ class UntitledTestCase(unittest.TestCase):
         self.verificationErrors = []
         self.accept_next_alert = True
     
-    def test_untitled_test_case(self):
+    def test_CreateContact(self):
         driver = self.driver
         self.open_home_page(driver)
         self.login(driver)
         self.open_contact_page(driver)
-        self.create_contact(driver, Contact (firstname="", middlename="", lastname="", nickname="",title="",company="",address="",home="",mobile="",work="",fax="",email="",bday="",bmonth="",byear="",address2="",phone2="",notes=""))
+        self.create_contact(driver, Contact (firstname="", middlename="w", lastname="i", nickname="r",title="",company="",address="",home="",mobile="",work="",fax="",email="",bday="5",bmonth="May",byear="",address2="",phone2="",notes=""))
         self.return_to_home_page(driver)
         self.logout(driver)
         driver.find_element_by_name("user").clear()
@@ -75,11 +75,11 @@ class UntitledTestCase(unittest.TestCase):
         driver.find_element_by_name("email").clear()
         driver.find_element_by_name("email").send_keys(contact.email)
         driver.find_element_by_name("bday").click()
-        Select(driver.find_element_by_name("bday")).select_by_visible_text("1")
-        driver.find_element_by_xpath("//option[@value='1']").click()
+        Select(driver.find_element_by_name("bday")).select_by_visible_text(str(contact.bday))
+        driver.find_element_by_xpath("//option[@value='"+str(contact.bday)+"']").click()
         driver.find_element_by_name("bmonth").click()
-        Select(driver.find_element_by_name("bmonth")).select_by_visible_text("January")
-        driver.find_element_by_xpath("//option[@value='January']").click()
+        Select(driver.find_element_by_name("bmonth")).select_by_visible_text(contact.bmonth)
+        driver.find_element_by_xpath("//option[@value='"+contact.bmonth+"']").click()
         driver.find_element_by_name("byear").click()
         driver.find_element_by_name("byear").clear()
         driver.find_element_by_name("byear").send_keys(contact.byear)

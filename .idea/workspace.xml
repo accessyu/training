@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8e32976-0bd1-4687-8b27-0cc53bde177f" name="Changes" comment="задание 3 рефакторинг">
+    <list default="true" id="b8e32976-0bd1-4687-8b27-0cc53bde177f" name="Changes" comment="задание 3 создание нового контакта в адресной книге. вспом.класс и методы.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/3_test_add_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/3_test_add_group.py" afterDir="false" />
     </list>
@@ -312,7 +312,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658171289647</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="задание 3 создание нового контакта в адресной книге. вспом.класс и методы.">
+      <created>1658261454160</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1658261454160</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -341,6 +348,7 @@
     <MESSAGE value="задание 3" />
     <MESSAGE value="задание 3 добавлены вспомогательные методы." />
     <MESSAGE value="задание 3 рефакторинг" />
-    <option name="LAST_COMMIT_MESSAGE" value="задание 3 рефакторинг" />
+    <MESSAGE value="задание 3 создание нового контакта в адресной книге. вспом.класс и методы." />
+    <option name="LAST_COMMIT_MESSAGE" value="задание 3 создание нового контакта в адресной книге. вспом.класс и методы." />
   </component>
 </project>
