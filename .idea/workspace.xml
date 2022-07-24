@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8e32976-0bd1-4687-8b27-0cc53bde177f" name="Changes" comment="задание 3 создание нового контакта в адресной книге. вспом.класс и методы. правки" />
+    <list default="true" id="b8e32976-0bd1-4687-8b27-0cc53bde177f" name="Changes" comment="задание 3 правки">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/3_test_add_group.py" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,7 +44,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="Python tests.pytest in 3_test_add_group.py">
+  <component name="RunManager" selected="Python tests.pytest in 3_test_add_contact.py">
     <configuration name="test_add_group" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="training" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -63,6 +66,22 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest in 3_test_add_contact.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="training" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/3_test_add_contact.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="pytest in 3_test_add_group.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="training" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -76,22 +95,6 @@
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;$PROJECT_DIR$/3_test_add_group.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest in C:/Users/j_ryadnova/PycharmProjects/training/2UntitledTestCase.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="training" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/2UntitledTestCase.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
@@ -145,11 +148,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.pytest in 3_test_add_contact.py" />
         <item itemvalue="Python tests.pytest in 3_test_add_group.py" />
         <item itemvalue="Python tests.pytest in test_add_group.py" />
         <item itemvalue="Python tests.pytest in C:/Users/j_ryadnova/PycharmProjects/training/6test_add_group.py" />
         <item itemvalue="Python tests.pytest in C:/Users/j_ryadnova/PycharmProjects/training/4test_add_group.py" />
-        <item itemvalue="Python tests.pytest in C:/Users/j_ryadnova/PycharmProjects/training/2UntitledTestCase.py" />
       </list>
     </recent_temporary>
   </component>
@@ -323,7 +326,21 @@
       <option name="project" value="LOCAL" />
       <updated>1658430244832</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="задание 3 правки">
+      <created>1658430475326</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1658430475326</updated>
+    </task>
+    <task id="LOCAL-00025" summary="задание 3 правки">
+      <created>1658430535128</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1658430535128</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -354,6 +371,7 @@
     <MESSAGE value="задание 3 рефакторинг" />
     <MESSAGE value="задание 3 создание нового контакта в адресной книге. вспом.класс и методы." />
     <MESSAGE value="задание 3 создание нового контакта в адресной книге. вспом.класс и методы. правки" />
-    <option name="LAST_COMMIT_MESSAGE" value="задание 3 создание нового контакта в адресной книге. вспом.класс и методы. правки" />
+    <MESSAGE value="задание 3 правки" />
+    <option name="LAST_COMMIT_MESSAGE" value="задание 3 правки" />
   </component>
 </project>
