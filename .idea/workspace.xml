@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b8e32976-0bd1-4687-8b27-0cc53bde177f" name="Changes" comment="4 задание доработка.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_add_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_add_group.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -354,7 +353,21 @@
       <option name="project" value="LOCAL" />
       <updated>1658657082412</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="4 задание доработка.">
+      <created>1658775543454</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1658775543454</updated>
+    </task>
+    <task id="LOCAL-00029" summary="4 задание доработка.">
+      <created>1658775708793</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1658775708793</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -387,6 +400,8 @@
     <MESSAGE value="задание 3 создание нового контакта в адресной книге. вспом.класс и методы. правки" />
     <MESSAGE value="задание 3 правки" />
     <MESSAGE value="задание 3 переименовала, удалила дубль" />
-    <option name="LAST_COMMIT_MESSAGE" value="задание 3 переименовала, удалила дубль" />
+    <MESSAGE value="4 задание." />
+    <MESSAGE value="4 задание доработка." />
+    <option name="LAST_COMMIT_MESSAGE" value="4 задание доработка." />
   </component>
 </project>
