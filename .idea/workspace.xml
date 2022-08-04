@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8e32976-0bd1-4687-8b27-0cc53bde177f" name="Changes" comment="6 задание создана фикстура общая для всех тестов">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixture/group.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/group.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixture/session.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/session.py" afterDir="false" />
-    </list>
+    <list default="true" id="b8e32976-0bd1-4687-8b27-0cc53bde177f" name="Changes" comment="6 задание создана фикстура общая для всех тестов, рабочий." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -411,7 +407,14 @@
       <option name="project" value="LOCAL" />
       <updated>1659552858247</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="6 задание создана фикстура общая для всех тестов, рабочий.">
+      <created>1659631178379</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1659631178379</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -449,6 +452,7 @@
     <MESSAGE value="5 задание создан пакеты для разных зон ответственности." />
     <MESSAGE value="5 задание создан пакеты для разных зон ответственности.c правками." />
     <MESSAGE value="6 задание создана фикстура общая для всех тестов" />
-    <option name="LAST_COMMIT_MESSAGE" value="6 задание создана фикстура общая для всех тестов" />
+    <MESSAGE value="6 задание создана фикстура общая для всех тестов, рабочий." />
+    <option name="LAST_COMMIT_MESSAGE" value="6 задание создана фикстура общая для всех тестов, рабочий." />
   </component>
 </project>
