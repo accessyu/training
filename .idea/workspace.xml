@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8e32976-0bd1-4687-8b27-0cc53bde177f" name="Changes" comment="9 задание">
+    <list default="true" id="b8e32976-0bd1-4687-8b27-0cc53bde177f" name="Changes" comment=" 9 задание с тестом по модификацией">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixture/application.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/application.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixture/group.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/group.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +52,7 @@
       <recent name="C:\Users\j_ryadnova\PycharmProjects\training\model" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.pytest in test_modify_group.py">
+  <component name="RunManager" selected="Python tests.pytest in test_del_group.py">
     <configuration name="quadratic" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="training" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -159,8 +161,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.pytest in test_modify_group.py" />
         <item itemvalue="Python tests.pytest in test_del_group.py" />
+        <item itemvalue="Python tests.pytest in test_modify_group.py" />
         <item itemvalue="Python tests.pytest in test_add_group.py" />
         <item itemvalue="Python tests.pytest in tet_modify_group.py" />
         <item itemvalue="Python.quadratic" />
@@ -442,7 +444,21 @@
       <option name="project" value="LOCAL" />
       <updated>1660160464023</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary=" 9 задание с модификацией">
+      <created>1660161460288</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1660161460288</updated>
+    </task>
+    <task id="LOCAL-00040" summary=" 9 задание с тестом по модификацией">
+      <created>1660161524280</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1660161524280</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -457,8 +473,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="первый тест" />
-    <MESSAGE value="тест Pycharm" />
     <MESSAGE value="тест Pycharm 2" />
     <MESSAGE value="тест Pycharm обновленный" />
     <MESSAGE value="тест рабочий 12/07" />
@@ -482,6 +496,8 @@
     <MESSAGE value="6 задание создана фикстура общая для всех тестов, рабочий." />
     <MESSAGE value="7 задание" />
     <MESSAGE value="9 задание" />
-    <option name="LAST_COMMIT_MESSAGE" value="9 задание" />
+    <MESSAGE value=" 9 задание с модификацией" />
+    <MESSAGE value=" 9 задание с тестом по модификацией" />
+    <option name="LAST_COMMIT_MESSAGE" value=" 9 задание с тестом по модификацией" />
   </component>
 </project>
