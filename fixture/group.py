@@ -1,4 +1,6 @@
 
+from model.group import Group
+
 class GroupHelper:
     def __init__(self, app):
         self.app = app
@@ -64,4 +66,16 @@ class GroupHelper:
         wd = self.app.wd
         self.open_groups_page()
         return len(wd.find_elements_by_name("seleted[]"))
+
+    def get_contact_list(self):
+        wd = self.app.wd
+        l = []
+        self.open_groups_page()
+        for element in wd.find_elements_by_css_selector("span.group"):
+            text = element.text
+            id = element.find_element_by_name("selected[]").get_attribute("value")
+            l.append(Group(name=text, id=id))
+        return l
+
+
 
