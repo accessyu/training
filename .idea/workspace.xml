@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8e32976-0bd1-4687-8b27-0cc53bde177f" name="Changes" comment=" 12 задание c правками.">
-      <change afterPath="$PROJECT_DIR$/test/13test_modify_group.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/доделки дз/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b8e32976-0bd1-4687-8b27-0cc53bde177f" name="Changes" comment="2 задание доработанное" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -481,7 +477,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660665106628</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="2 задание доработанное">
+      <created>1660721228378</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1660721228378</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -496,7 +499,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="задание 4 фикстура" />
     <MESSAGE value="задание 4" />
     <MESSAGE value="задание 4, актуальная, последняя версия. перевести тесты с unittest на py.test и реализовать фиксутры." />
     <MESSAGE value="задание 3, запись через рекордер." />
@@ -521,6 +523,7 @@
     <MESSAGE value=" 11 задание" />
     <MESSAGE value=" 12 задание" />
     <MESSAGE value=" 12 задание c правками." />
-    <option name="LAST_COMMIT_MESSAGE" value=" 12 задание c правками." />
+    <MESSAGE value="2 задание доработанное" />
+    <option name="LAST_COMMIT_MESSAGE" value="2 задание доработанное" />
   </component>
 </project>
