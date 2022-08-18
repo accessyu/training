@@ -8,7 +8,7 @@ testdata = [
         Group(name="", header="", footer="")
 ]
 
-@pytest.mark.parametrize("group",testdata, ids=[])
+@pytest.mark.parametrize("group",testdata, ids=[repr(x) for x in testdata])
 def test_add_group(app, group):
     pass
     # old_groups = app.group.get_group_list()

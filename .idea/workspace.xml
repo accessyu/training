@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8e32976-0bd1-4687-8b27-0cc53bde177f" name="Changes" comment="13 задание">
-      <change afterPath="$PROJECT_DIR$/test/15test_add_group.py" afterDir="false" />
+    <list default="true" id="b8e32976-0bd1-4687-8b27-0cc53bde177f" name="Changes" comment="15 задание">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/15test_add_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/15test_add_group.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -501,7 +501,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660738985060</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="15 задание">
+      <created>1660823997938</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1660823997938</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -516,7 +523,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="задание 3, запись через рекордер." />
     <MESSAGE value="задание 3" />
     <MESSAGE value="задание 3 добавлены вспомогательные методы." />
     <MESSAGE value="задание 3 рефакторинг" />
@@ -541,6 +547,7 @@
     <MESSAGE value="2 задание доработанное" />
     <MESSAGE value="2 задание доработанное с учетом замечаний" />
     <MESSAGE value="13 задание" />
-    <option name="LAST_COMMIT_MESSAGE" value="13 задание" />
+    <MESSAGE value="15 задание" />
+    <option name="LAST_COMMIT_MESSAGE" value="15 задание" />
   </component>
 </project>
