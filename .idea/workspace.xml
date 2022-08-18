@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8e32976-0bd1-4687-8b27-0cc53bde177f" name="Changes" comment="15 задание c правками">
+    <list default="true" id="b8e32976-0bd1-4687-8b27-0cc53bde177f" name="Changes" comment="15 задание c правками 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/group.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/group.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/15test_add_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/15test_add_group.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,13 +171,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1656244719839</updated>
-    </task>
-    <task id="LOCAL-00001" summary="1">
-      <created>1656763424489</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1656763424490</updated>
     </task>
     <task id="LOCAL-00002" summary="первый тест">
       <created>1656774393617</created>
@@ -515,7 +508,14 @@
       <option name="project" value="LOCAL" />
       <updated>1660824609844</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="15 задание c правками 2">
+      <created>1660825556139</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1660825556139</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -530,7 +530,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="задание 3 добавлены вспомогательные методы." />
     <MESSAGE value="задание 3 рефакторинг" />
     <MESSAGE value="задание 3 создание нового контакта в адресной книге. вспом.класс и методы." />
     <MESSAGE value="задание 3 создание нового контакта в адресной книге. вспом.класс и методы. правки" />
@@ -555,6 +554,7 @@
     <MESSAGE value="13 задание" />
     <MESSAGE value="15 задание" />
     <MESSAGE value="15 задание c правками" />
-    <option name="LAST_COMMIT_MESSAGE" value="15 задание c правками" />
+    <MESSAGE value="15 задание c правками 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="15 задание c правками 2" />
   </component>
 </project>
