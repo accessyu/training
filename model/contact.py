@@ -28,4 +28,5 @@ class Contact:
                and (self.address == other.address)
     def  __lt__ (self,other):
         return (self.lastname,self.firstname,self.address)  < (other.lastname,other.firstname,other.address)
-
+    def __repr__(self):
+        return '"'+", ".join([self.lastname, self.firstname, self.address]) + '"'

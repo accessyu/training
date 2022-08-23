@@ -2,10 +2,10 @@ import self as self
 
 from model.contact import Contact
 class ContactHelper:
-
+    contact_cache = None
     def __init__(self, app):
         self.app = app
-        self.contact_cache = None
+
 
   #  def open_contact_page(self):
    #     wd = self.app.wd
@@ -15,6 +15,7 @@ class ContactHelper:
         wd = self.app.wd
         self.open_add_contact_page()
         self.fill_contact_form(contact)
+        wd.find_element_by_name("submit").click()
         self.contact_cache = None
 
     def fill_contact_form(self, contact):
