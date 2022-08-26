@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8e32976-0bd1-4687-8b27-0cc53bde177f" name="Changes" comment="17 задание">
+    <list default="true" id="b8e32976-0bd1-4687-8b27-0cc53bde177f" name="Changes" comment="9 задание с доработкой от 26.08">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixture/group.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/group.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target.json" beforeDir="false" afterPath="$PROJECT_DIR$/target.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixture/contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/contact.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_del_contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_del_contact.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test_modify_contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_modify_contact.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_modify_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_modify_group.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/доделки дз/2test_add_group.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/доделки дз/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/доделки дз/test_add_contact.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/доделки дз/test_add_group.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,13 +182,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1656244719839</updated>
-    </task>
-    <task id="LOCAL-00007" summary="тест рабочий 12/07">
-      <created>1657649676962</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1657649676962</updated>
     </task>
     <task id="LOCAL-00008" summary="задание 2 вспом. методы и передача параметров в методы.">
       <created>1657815564495</created>
@@ -531,7 +519,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661372489706</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="9 задание с доработкой от 26.08">
+      <created>1661530519029</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1661530519030</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -546,7 +541,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="4 задание." />
     <MESSAGE value="4 задание доработка." />
     <MESSAGE value="5 задание создан пакеты для разных зон ответственности." />
     <MESSAGE value="5 задание создан пакеты для разных зон ответственности.c правками." />
@@ -571,6 +565,7 @@
     <MESSAGE value="13 задание доработанное" />
     <MESSAGE value="13 задание от 23.08" />
     <MESSAGE value="17 задание" />
-    <option name="LAST_COMMIT_MESSAGE" value="17 задание" />
+    <MESSAGE value="9 задание с доработкой от 26.08" />
+    <option name="LAST_COMMIT_MESSAGE" value="9 задание с доработкой от 26.08" />
   </component>
 </project>
