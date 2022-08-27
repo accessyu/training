@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8e32976-0bd1-4687-8b27-0cc53bde177f" name="Changes" comment="13 задание с доработкой от 26.08">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixture/contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/contact.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixture/group.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/group.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/15test_add_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/15test_add_group.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_add_contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_add_contact.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_add_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_add_group.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/доделки дз/2test_add_group.py" beforeDir="false" />
-    </list>
+    <list default="true" id="b8e32976-0bd1-4687-8b27-0cc53bde177f" name="Changes" comment="15 задание доработка от 27.08" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -184,20 +176,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1656244719839</updated>
-    </task>
-    <task id="LOCAL-00009" summary="задание 2 вспом. методы и передача параметров в методы.">
-      <created>1657816221968</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1657816221968</updated>
-    </task>
-    <task id="LOCAL-00010" summary="задание 2 вспом. методы и передача параметров в методы.">
-      <created>1657816997252</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1657816997252</updated>
     </task>
     <task id="LOCAL-00011" summary="задание 4 фикстура">
       <created>1657972449632</created>
@@ -528,7 +506,21 @@
       <option name="project" value="LOCAL" />
       <updated>1661533396452</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="15 задание с доработкой от 27.08">
+      <created>1661622033388</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1661622033388</updated>
+    </task>
+    <task id="LOCAL-00059" summary="15 задание доработка от 27.08">
+      <created>1661622119176</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1661622119176</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -543,8 +535,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="5 задание создан пакеты для разных зон ответственности." />
-    <MESSAGE value="5 задание создан пакеты для разных зон ответственности.c правками." />
     <MESSAGE value="6 задание создана фикстура общая для всех тестов" />
     <MESSAGE value="6 задание создана фикстура общая для всех тестов, рабочий." />
     <MESSAGE value="7 задание" />
@@ -568,6 +558,8 @@
     <MESSAGE value="17 задание" />
     <MESSAGE value="9 задание с доработкой от 26.08" />
     <MESSAGE value="13 задание с доработкой от 26.08" />
-    <option name="LAST_COMMIT_MESSAGE" value="13 задание с доработкой от 26.08" />
+    <MESSAGE value="15 задание с доработкой от 27.08" />
+    <MESSAGE value="15 задание доработка от 27.08" />
+    <option name="LAST_COMMIT_MESSAGE" value="15 задание доработка от 27.08" />
   </component>
 </project>
