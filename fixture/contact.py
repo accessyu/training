@@ -44,7 +44,7 @@ class ContactHelper:
         rows = table.find_elements_by_tag_name("tr")
         for row in rows[1:]:
             cols = row.find_elements_by_tag_name("td")
-            l.append(Contact(lastname = cols[1].text, firstname=cols[2].text, address=cols[3].text))
+            l.append(Contact(lastname=cols[1].text, firstname=cols[2].text, address=cols[3].text))
         self.contact_cache = l
         return l
 
@@ -55,10 +55,10 @@ class ContactHelper:
         wd.switch_to.alert.accept()
         self.contact_cache = None
 
-    def modify_first_contact(self,contact):
-        self.modify_contact_by_index(0,contact)
+    def modify_first_contact(self, contact):
+        self.modify_contact_by_index(0, contact)
 
-    def modify_contact_by_index(self,index,contact):
+    def modify_contact_by_index(self, index, contact):
         wd = self.app.wd
         table = wd.find_element_by_id("maintable")
         row = table.find_elements_by_tag_name("tr")[index+1]
@@ -76,7 +76,7 @@ class ContactHelper:
             wd.find_element_by_name(field_name).clear()
             wd.find_element_by_name(field_name).send_keys(text)
 
-    def delete_contact_by_index(self,index):
+    def delete_contact_by_index(self, index):
         wd = self.app.wd
         table = wd.find_element_by_id("maintable")
         row = table.find_elements_by_tag_name("tr")[index + 1]
