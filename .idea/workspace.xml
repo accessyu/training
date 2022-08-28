@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8e32976-0bd1-4687-8b27-0cc53bde177f" name="Changes" comment="15 задание. параметризация.доработка от 27.08">
-      <change beforePath="$PROJECT_DIR$/test/test_del_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_del_group.py" afterDir="false" />
+    <list default="true" id="b8e32976-0bd1-4687-8b27-0cc53bde177f" name="Changes" comment="16 задание.доработка от 27.08">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,13 +178,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1656244719839</updated>
-    </task>
-    <task id="LOCAL-00012" summary="задание 4 фикстура">
-      <created>1657972926672</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1657972926673</updated>
     </task>
     <task id="LOCAL-00013" summary="задание 4">
       <created>1657976973587</created>
@@ -522,7 +515,14 @@
       <option name="project" value="LOCAL" />
       <updated>1661622172073</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="16 задание.доработка от 27.08">
+      <created>1661622769047</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1661622769054</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -537,7 +537,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="6 задание создана фикстура общая для всех тестов, рабочий." />
     <MESSAGE value="7 задание" />
     <MESSAGE value="9 задание" />
     <MESSAGE value=" 9 задание с модификацией" />
@@ -562,6 +561,7 @@
     <MESSAGE value="15 задание с доработкой от 27.08" />
     <MESSAGE value="15 задание доработка от 27.08" />
     <MESSAGE value="15 задание. параметризация.доработка от 27.08" />
-    <option name="LAST_COMMIT_MESSAGE" value="15 задание. параметризация.доработка от 27.08" />
+    <MESSAGE value="16 задание.доработка от 27.08" />
+    <option name="LAST_COMMIT_MESSAGE" value="16 задание.доработка от 27.08" />
   </component>
 </project>

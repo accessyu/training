@@ -12,6 +12,7 @@ def test_delete_first_contact(app):
     old_contact[0:1] = []
     assert old_contact ==new_contact
 
+
 def test_delete_random_contact(app):
     if app.contact.count() == 0:
         app.contact.create(Contact(lastname = "1",firstname="w", address="a"))
