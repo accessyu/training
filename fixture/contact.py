@@ -44,7 +44,8 @@ class ContactHelper:
         rows = table.find_elements_by_tag_name("tr")
         for row in rows[1:]:
             cols = row.find_elements_by_tag_name("td")
-            l.append(Contact(lastname=cols[1].text, firstname=cols[2].text, address=cols[3].text))
+            cb = cols[0].find_element_by_tag_name("input")
+            l.append(Contact(id=cb.get_attribute("id"), lastname=cols[1].text, firstname=cols[2].text, address=cols[3].text))
         self.contact_cache = l
         return l
 
