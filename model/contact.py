@@ -2,7 +2,7 @@ class Contact:
 
     def __init__(self, id= None, firstname= None, middlename= None, lastname= None, nickname= None,title= None,
                  company= None,address= None,home= None,mobile= None,work= None,fax= None,email= None,
-                 bday= None,bmonth= None,byear= None,address2= None,phone2= None,notes= None):
+                 bday= None,bmonth= None,byear= None,address2= None,phone2= None,notes= None, all_phones_from_home_page=None):
         self.id = id
         self.firstname = firstname
         self.middlename = middlename
@@ -22,6 +22,7 @@ class Contact:
         self.address2 = address2
         self.phone2 = phone2
         self.notes = notes
+        self.all_phones_from_home_page = all_phones_from_home_page
 
     def __eq__(self, other):
         return ((self.id == other.id) and

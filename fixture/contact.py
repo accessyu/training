@@ -6,7 +6,6 @@ class ContactHelper:
     def __init__(self, app):
         self.app = app
 
-
   #  def open_contact_page(self):
    #     wd = self.app.wd
    #     wd.find_element_by_link_text("contact").click()
@@ -31,9 +30,13 @@ class ContactHelper:
         wd = self.app.wd
         wd.find_element_by_link_text("home").click()
 
+    @property
     def count(self):
-        return len(self.get_contact_list())
-
+        #self.app.open_home_page()
+        #return len(self.get_contact_list())
+        #self.contact_cache = None
+        table = wd.find_element_by_id("maintable")
+        return rows(table.find_elements_by_tag_name("tr") - 1)
 
     def get_contact_list(self):
         if self.contact_cache is not None:
@@ -45,11 +48,13 @@ class ContactHelper:
         for row in rows[1:]:
             cells = row.find_elements_by_tag_name("td")
             id = cells[0].find_element_by_tag_name("input").get_attribute("value")
-            all_phones = cells[5].text.splitlines()
+            #all_phones = cells[5].text.splitlines()
+            all_phones = cells[5].text
             home=all_phones[0] if len(all_phones) > 0 else ""
             mobile = all_phones[1] if len(all_phones) > 1 else ""
-            l.append(Contact(id=id, lastname=cells[1].text, firstname=cells[2].text, address=cells[3].text,
-                             home=home, mobile=mobile, work="", fax=""))
+            l.append(Contact(firstname=cells[2].text, lastname=cells[1].text, id=id, all_phones_from_home_page=all_phones))
+                              #address=cells[3].text,
+                             #home=home, mobile=mobile, work="", fax=""))
         self.contact_cache = l
         return l
 
