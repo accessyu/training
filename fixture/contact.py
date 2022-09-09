@@ -32,11 +32,11 @@ class ContactHelper:
 
     @property
     def count(self):
-        #self.app.open_home_page()
-        #return len(self.get_contact_list())
-        #self.contact_cache = None
-        table = wd.find_element_by_id("maintable")
-        return rows(table.find_elements_by_tag_name("tr") - 1)
+    self.app.open_home_page()
+    return len(self.get_contact_list())
+    self.contact_cache = None
+    table = wd.find_element_by_id("maintable")
+    return rows(table.find_elements_by_tag_name("tr") - 1)
 
     def get_contact_list(self):
         if self.contact_cache is not None:

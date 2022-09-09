@@ -27,7 +27,7 @@ def test_add_contact(app, contact):
 
         app.contact.create(contact)
         app.contact.return_to_contact()
-        assert len(old_contacts) + 1 == app.contact.count()
+        assert len(old_contacts) + 1 == app.contact.count
         new_contacts = app.contact.get_contact_list()
         old_contacts.append(contact)
         assert sorted(old_contacts) == sorted(new_contacts)
