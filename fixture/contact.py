@@ -33,10 +33,9 @@ class ContactHelper:
     @property
     def count(self):
         self.app.open_home_page()
-        return len(self.get_contact_list())
-        self.contact_cache = None
+        wd = self.app.wd
         table = wd.find_element_by_id("maintable")
-        return rows(table.find_elements_by_tag_name("tr") - 1)
+        return len(table.find_elements_by_tag_name("tr")) - 1
 
     def get_contact_list(self):
         if self.contact_cache is not None:
@@ -49,11 +48,18 @@ class ContactHelper:
             cells = row.find_elements_by_tag_name("td")
             id = cells[0].find_element_by_tag_name("input").get_attribute("value")
             #all_phones = cells[5].text.splitlines()
-            all_phones = cells[5].text
-            home=all_phones[0] if len(all_phones) > 0 else ""
-            mobile = all_phones[1] if len(all_phones) > 1 else ""
-            l.append(Contact(firstname=cells[2].text, lastname=cells[1].text, id=id, all_phones_from_home_page=all_phones))
-                              #address=cells[3].text,
+            all_phones = cells[5].text.splitlines()
+            homephone=all_phones[0] if len(all_phones) > 0 else ""
+            mobilephone = all_phones[1] if len(all_phones) > 1 else ""
+            workphone = all_phones[2] if len(all_phones) > 2 else ""
+            secondaryphone = all_phones[3] if len(all_phones) > 3 else ""
+            all_emails = cells[4].text.splitlines()
+            email1 = all_emails[0] if len(all_emails) > 0 else ""
+            email2 = all_emails[1] if len(all_emails) > 1 else ""
+            email3 = all_emails[2] if len(all_emails) > 2 else ""
+            l.append(Contact(firstname=cells[2].text, lastname=cells[1].text, id=id,
+                             home=homephone, mobile=mobilephone,work=workphone,
+                             phone2=secondaryphone, email = [email1, email2, email3],address=cells[3].text))
                              #home=home, mobile=mobile, work="", fax=""))
         self.contact_cache = l
         return l
@@ -118,9 +124,14 @@ class ContactHelper:
         workphone = re.search("W: (.*)", text).group(1) if "W: " in text else ""
         mobilephone = re.search("M: (.*)", text).group(1) if "M: " in text else ""
         secondaryphone = re.search("P: (.*)", text).group(1) if "P: " in text else ""
+        content=wd.find_element_by_id("content")
+        emails=[i.text for  i in content.find_elements_by_tag_name("a")]
+        while len(emails)<3:
+            emails.append("")
+
         self.return_to_contact()
         return Contact(home=homephone, mobile=mobilephone,
-                       work=workphone,  fax=secondaryphone)
+                       work=workphone,  phone2=secondaryphone,email=emails)
 
     def get_contact_info_from_edit_page(self, index):
         wd = self.app.wd
@@ -131,10 +142,14 @@ class ContactHelper:
         homephone =  wd.find_element_by_name("home").text
         workphone = wd.find_element_by_name("work").text
         mobilephone = wd.find_element_by_name("mobile").text
-        secondaryphone = wd.find_element_by_name("fax").text
+        secondaryphone = wd.find_element_by_name("phone2").text
+        email1 = wd.find_element_by_name("email").text
+        email2 = wd.find_element_by_name("email2").text
+        email3 = wd.find_element_by_name("email3").text
+
         self.return_to_contact()
         return Contact(home=homephone, mobile=mobilephone,
-                       work=workphone,  fax=secondaryphone)
+                       work=workphone,  phone2=secondaryphone,email=[email1,email2,email3] )
 
 
 
