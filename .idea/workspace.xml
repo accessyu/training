@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8e32976-0bd1-4687-8b27-0cc53bde177f" name="Changes" comment="9 задание.доработка от 09.09">
-      <change afterPath="$PROJECT_DIR$/data/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/generator/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/generator/group.py" afterDir="false" />
+    <list default="true" id="b8e32976-0bd1-4687-8b27-0cc53bde177f" name="Changes" comment="18 задание.от 10.09">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixture/contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/contact.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixture/group.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/group.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/contact.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_add_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_add_group.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,13 +183,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1656244719839</updated>
-    </task>
-    <task id="LOCAL-00019" summary="задание 3">
-      <created>1658168147045</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1658168147045</updated>
     </task>
     <task id="LOCAL-00020" summary="задание 3 добавлены вспомогательные методы.">
       <created>1658170215526</created>
@@ -535,7 +520,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662755653296</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="18 задание.от 10.09">
+      <created>1662840188079</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1662840188115</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -550,7 +542,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value=" 11 задание" />
     <MESSAGE value=" 12 задание" />
     <MESSAGE value=" 12 задание c правками." />
     <MESSAGE value="2 задание доработанное" />
@@ -575,7 +566,8 @@
     <MESSAGE value="9 задание.доработка от 04.09" />
     <MESSAGE value="9 задание.доработка от 08.09" />
     <MESSAGE value="9 задание.доработка от 09.09" />
-    <option name="LAST_COMMIT_MESSAGE" value="9 задание.доработка от 09.09" />
+    <MESSAGE value="18 задание.от 10.09" />
+    <option name="LAST_COMMIT_MESSAGE" value="18 задание.от 10.09" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

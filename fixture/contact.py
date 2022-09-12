@@ -30,6 +30,7 @@ class ContactHelper:
         wd = self.app.wd
         wd.find_element_by_link_text("home").click()
 
+
     @property
     def count(self):
         self.app.open_home_page()
