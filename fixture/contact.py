@@ -66,11 +66,7 @@ class ContactHelper:
         return l
 
     def delete_first_contact(self):
-        wd = self.app.wd
-        wd.find_element_by_id("11").click()
-        wd.find_element_by_xpath("//input[@value='Delete']").click()
-        wd.switch_to.alert.accept()
-        self.contact_cache = None
+        self.delete_contact_by_index(0)
 
     def modify_first_contact(self, contact):
         self.modify_contact_by_index(0, contact)

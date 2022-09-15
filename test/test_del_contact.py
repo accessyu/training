@@ -4,6 +4,7 @@ from random import randrange
 def test_delete_first_contact(app):
     if app.contact.count == 0:
         app.contact.create(Contact(lastname = "1",firstname="w", address="a"))
+        app.contact.return_to_contact()
     old_contact= app.contact.get_contact_list()
     app.contact.delete_first_contact()
     app.contact.return_to_contact()
@@ -16,6 +17,7 @@ def test_delete_first_contact(app):
 def test_delete_random_contact(app):
     if app.contact.count == 0:
         app.contact.create(Contact(lastname = "1",firstname="w", address="a"))
+        app.contact.return_to_contact()
     old_contact= app.contact.get_contact_list()
     index = randrange(len(old_contact))
     app.contact.delete_contact_by_index(index)
