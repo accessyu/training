@@ -8,6 +8,7 @@ import getopt
 import sys
 import re
 
+
 try:
     opts, args = getopt.getopt(sys.argv[1:], "n:f:", ["numbers of groups", "file"])
 except getopt.GetoptError as err:
