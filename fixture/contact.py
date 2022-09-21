@@ -62,6 +62,8 @@ class ContactHelper:
                              home=homephone, mobile=mobilephone,work=workphone,
                              phone2=secondaryphone, email = [email1, email2, email3],address=cells[3].text))
                              #home=home, mobile=mobile, work="", fax=""))
+
+
         self.contact_cache = l
         return l
 
@@ -143,10 +145,13 @@ class ContactHelper:
         email1 = wd.find_element_by_name("email").text
         email2 = wd.find_element_by_name("email2").text
         email3 = wd.find_element_by_name("email3").text
-
+        firstname = wd.find_element_by_name("firstname").text
+        lastname = wd.find_element_by_name("lastname").text
+        address = wd.find_element_by_name("address").text
         self.return_to_contact()
         return Contact(home=homephone, mobile=mobilephone,
-                       work=workphone,  phone2=secondaryphone,email=[email1,email2,email3] )
+                       work=workphone,  phone2=secondaryphone,email=[email1,email2,email3],
+                        firstname=firstname, lastname=lastname,address=address)
 
 
 
