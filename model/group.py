@@ -8,6 +8,14 @@ class Group:
         self.footer = footer
         self.id = id
 
+    @staticmethod
+    def make_from_dict(d):
+        g = Group()
+        for k,v in d.items():
+            setattr(g,k,v)
+        return g
+
+
     def __repr__(self):
        return "%s:%s;%s;%s" % (self.id, self.name, self.header, self.header)
 
