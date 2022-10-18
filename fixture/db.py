@@ -10,7 +10,7 @@ class DbFixture:
         self.user = user
         self.password = password
         self.connection = mysql.connector.connect(host=host, database=name, user=user,
-                                                  password=password, utocommit=True)
+                                                  password=password, autocommit=True)
 
     def get_group_list(self):
         list = []
@@ -28,7 +28,7 @@ class DbFixture:
         list = []
         cursor = self.connection.cursor()
         try:
-            cursor.execute("select id, firstname, lastname, from addressbook where deprecated='0000-00-00 00:00:00'")
+            cursor.execute("select id, firstname, lastname from addressbook where deprecated='0000-00-00 00:00:00'")
             for row in cursor:
                 (id, firstname, lastname) = row
                 list.append(Contact(id=str(id), firstname=firstname, lastname=lastname))
@@ -38,5 +38,20 @@ class DbFixture:
 
     def destroy(self):
         self.connection.close()
+
+    def get_contacts_in_group(self, g):
+        list = []
+        cursor = self.connection.cursor()
+        try:
+            cursor.execute("select ab.id, firstname, lastname "
+                           "from addressbook ab join address_in_groups aig on (ab.id = aig.id)"
+                           " where ab.deprecated='0000-00-00 00:00:00' and aig.group_id=%s" % g.id)
+
+            for row in cursor:
+                (id, firstname, lastname) = row
+                list.append(Contact(id=str(id), firstname=firstname, lastname=lastname))
+        finally:
+            cursor.close()
+        return list
 
 

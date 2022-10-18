@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 from model.group import Group
 
-def test_add_group(app, db, json_groups):
-    group = json_groups
+def test_add_group(app,db, json_groups, check_ui):
+    group = Group.make_from_dict(json_groups)
     #old_groups = app.group.get_group_list()
     old_groups = db.get_group_list()
     app.group.create(group)
