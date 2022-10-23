@@ -6,6 +6,7 @@ import os.path
 from fixture.application import Application
 from fixture.db import DbFixture
 
+
 fixture = None
 target = None
 
