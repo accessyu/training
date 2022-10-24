@@ -34,6 +34,7 @@ class Contact:
         (self.firstname == other.firstname) and
         (self.address == other.address))
 
+
     def  __lt__ (self,other):
         return self.id  < other.id
     def __repr__(self):

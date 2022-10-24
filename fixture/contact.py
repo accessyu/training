@@ -128,6 +128,7 @@ class ContactHelper:
         while len(emails)<3:
             emails.append("")
 
+
         self.return_to_contact()
         return Contact(home=homephone, mobile=mobilephone,
                        work=workphone,  phone2=secondaryphone,email1 = emails[0], email2 = emails[1], email3 = emails[2])
