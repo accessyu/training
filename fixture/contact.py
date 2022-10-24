@@ -58,9 +58,9 @@ class ContactHelper:
             email1 = all_emails[0] if len(all_emails) > 0 else ""
             email2 = all_emails[1] if len(all_emails) > 1 else ""
             email3 = all_emails[2] if len(all_emails) > 2 else ""
-            l.append(Contact(firstname=cells[2].text, lastname=cells[1].text, id=id,
-                             home=homephone, mobile=mobilephone,work=workphone,
-                             phone2=secondaryphone, email = [email1, email2, email3],address=cells[3].text))
+            l.append(Contact(id=id, firstname=cells[2].text, lastname=cells[1].text, all_emails_from_home_page=cells[4].text,
+                             home=homephone, mobile=mobilephone,work=workphone,all_phones_from_home_page=cells[5].text,
+                             phone2=secondaryphone, email1 = email1, email2 = email2, email3 = email3 ,address=cells[3].text))
                              #home=home, mobile=mobile, work="", fax=""))
 
 
@@ -130,7 +130,7 @@ class ContactHelper:
 
         self.return_to_contact()
         return Contact(home=homephone, mobile=mobilephone,
-                       work=workphone,  phone2=secondaryphone,email=emails)
+                       work=workphone,  phone2=secondaryphone,email1 = emails[0], email2 = emails[1], email3 = emails[2])
 
     def get_contact_info_from_edit_page(self, index):
         wd = self.app.wd
@@ -150,8 +150,8 @@ class ContactHelper:
         address = wd.find_element_by_name("address").text
         self.return_to_contact()
         return Contact(home=homephone, mobile=mobilephone,
-                       work=workphone,  phone2=secondaryphone,email=[email1,email2,email3],
-                        firstname=firstname, lastname=lastname,address=address)
+                       work=workphone,  phone2=secondaryphone, email1=email1, email2=email2, email3=email3,
+                        firstname=firstname, lastname=lastname, address=address)
 
 
 

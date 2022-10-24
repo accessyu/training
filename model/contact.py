@@ -1,8 +1,9 @@
 class Contact:
 
-    def __init__(self, id= None, firstname= "", middlename= None, lastname= "", nickname= None,title= None,
-                 company= None,address= "",home= None,mobile= None,work= None,fax= None,email= None,
-                 bday= None,bmonth= None,byear= None,address2= None,phone2= None,notes= None, all_phones_from_home_page=None):
+    def __init__(self, id= None, all_emails_from_home_page=None,
+                 firstname= "", middlename= None, lastname= "", nickname= None,title= None,
+                 company= None,address= "",home= None,mobile= None,work= None,fax= None,email1 = None,email2 = None,
+                 email3 =None,bday= None,bmonth= None,byear= None,address2= None,phone2= None,notes= None, all_phones_from_home_page=None):
         self.id = id
         self.firstname = firstname
         self.middlename = middlename
@@ -15,7 +16,9 @@ class Contact:
         self.mobile = mobile
         self.work = work
         self.fax = fax
-        self.email = email
+        self.email1 = email1
+        self.email2 = email2
+        self.email3 = email3
         self.bday = bday
         self.bmonth = bmonth
         self.byear = byear
@@ -23,6 +26,7 @@ class Contact:
         self.phone2 = phone2
         self.notes = notes
         self.all_phones_from_home_page = all_phones_from_home_page
+        self.all_emails_from_home_page = all_emails_from_home_page
 
     def __eq__(self, other):
         return ((self.id == other.id) and
