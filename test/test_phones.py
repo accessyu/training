@@ -41,6 +41,10 @@ def clear_crnl(s):
 def clear_space(s):
     return re.sub("\s+", " ", s).strip()
 
+def clear_email(s):
+    return s.strip()
+
+
 def merge_phones_like_on_home_page(contact):
     return "\n".join(filter(lambda x: x != "",
                             map(lambda x: clear(x),
@@ -50,6 +54,6 @@ def merge_phones_like_on_home_page(contact):
 
 def merge_emails_like_on_home_page(contact):
     return "\n".join(filter(lambda x: x != "",
-                            map(lambda x: clear(x),
+                            map(lambda x: clear_email(x),
                                 filter(lambda x: x is not None,
                                        [contact.email1,contact.email2,contact.email3]))))
