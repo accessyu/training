@@ -130,11 +130,10 @@ class ContactHelper:
         emails=[i.text for  i in content.find_elements_by_tag_name("a")]
         while len(emails)<3:
             emails.append("")
-
-
         self.return_to_contact()
         return Contact(home=homephone, mobile=mobilephone,
                        work=workphone,  phone2=secondaryphone,email1 = emails[0], email2 = emails[1], email3 = emails[2])
+
 
     def get_contact_info_from_edit_page(self, index):
         wd = self.app.wd
