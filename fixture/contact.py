@@ -63,9 +63,12 @@ class ContactHelper:
                              phone2=secondaryphone, email1 = email1, email2 = email2, email3 = email3 ,address=cells[3].text))
                              #home=home, mobile=mobile, work="", fax=""))
 
-
+        f = open("test.txt", 'wb+')
+        f.write(''.join(l))
+        f.close()
         self.contact_cache = l
         return l
+
 
     def delete_first_contact(self):
         self.delete_contact_by_index(0)
@@ -139,20 +142,26 @@ class ContactHelper:
         row = table.find_elements_by_tag_name("tr")[index + 1]
         cols = row.find_elements_by_tag_name("td")
         cols[7].click()
-        homephone =  wd.find_element_by_name("home").text
-        workphone = wd.find_element_by_name("work").text
-        mobilephone = wd.find_element_by_name("mobile").text
-        secondaryphone = wd.find_element_by_name("phone2").text
-        email1 = wd.find_element_by_name("email").text
-        email2 = wd.find_element_by_name("email2").text
-        email3 = wd.find_element_by_name("email3").text
-        firstname = wd.find_element_by_name("firstname").text
-        lastname = wd.find_element_by_name("lastname").text
-        address = wd.find_element_by_name("address").text
+        homephone =  wd.find_element_by_name("home").get_attribute("value")
+        workphone = wd.find_element_by_name("work").get_attribute("value")
+        mobilephone = wd.find_element_by_name("mobile").get_attribute("value")
+        secondaryphone = wd.find_element_by_name("phone2").get_attribute("value")
+        email1 = wd.find_element_by_name("email").get_attribute("value")
+        email2 = wd.find_element_by_name("email2").get_attribute("value")
+        email3 = wd.find_element_by_name("email3").get_attribute("value")
+        firstname = wd.find_element_by_name("firstname").get_attribute("value")
+        lastname = wd.find_element_by_name("lastname").get_attribute("value")
+        address = wd.find_element_by_name("address").get_attribute("value")
         self.return_to_contact()
         return Contact(home=homephone, mobile=mobilephone,
                        work=workphone,  phone2=secondaryphone, email1=email1, email2=email2, email3=email3,
                         firstname=firstname, lastname=lastname, address=address)
+
+
+
+
+
+
 
 
 

@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8e32976-0bd1-4687-8b27-0cc53bde177f" name="Changes" comment="доработки 21 задание.">
+    <list default="true" id="b8e32976-0bd1-4687-8b27-0cc53bde177f" name="Changes" comment="14, 21 задание (доработка).">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixture/contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/contact.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/13test_del_group.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/13test_modify_group.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/15test_add_contact.py" beforeDir="false" />
@@ -39,18 +40,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/j_ryadnova/PycharmProjects/training&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/j_ryadnova/PycharmProjects/pythonProject/python_training_mantis",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;ChangesTree.GroupingKeys&quot;: [
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\j_ryadnova\PycharmProjects\training\model" />
@@ -59,7 +60,7 @@
     </key>
   </component>
   <component name="RunManager" selected="Python tests.pytest in test_phones.py">
-    <configuration name="check_db_connection" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="contact" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="training" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -67,11 +68,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/fixture" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/check_db_connection.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fixture/contact.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -167,7 +168,7 @@
     </configuration>
     <list>
       <item itemvalue="Python.test_add_group" />
-      <item itemvalue="Python.check_db_connection" />
+      <item itemvalue="Python.contact" />
       <item itemvalue="Python tests.pytest for test_phones.test_phones_on_home_page_db" />
       <item itemvalue="Python tests.pytest in 21.py" />
       <item itemvalue="Python tests.pytest in test_phones.py" />
@@ -176,10 +177,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.pytest in test_phones.py" />
+        <item itemvalue="Python.contact" />
         <item itemvalue="Python tests.pytest for test_phones.test_phones_on_home_page_db" />
         <item itemvalue="Python tests.pytest in test_del_contact.py" />
         <item itemvalue="Python tests.pytest in 21.py" />
-        <item itemvalue="Python.check_db_connection" />
       </list>
     </recent_temporary>
   </component>
@@ -191,20 +192,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1656244719839</updated>
-    </task>
-    <task id="LOCAL-00035" summary="6 задание создана фикстура общая для всех тестов, рабочий.">
-      <created>1659631178379</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1659631178379</updated>
-    </task>
-    <task id="LOCAL-00036" summary="6 задание создана фикстура общая для всех тестов, рабочий.">
-      <created>1659631219782</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1659631219782</updated>
     </task>
     <task id="LOCAL-00037" summary="7 задание">
       <created>1659804923449</created>
@@ -535,7 +522,21 @@
       <option name="project" value="LOCAL" />
       <updated>1666643873243</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="доработки 14 и 21 задания.">
+      <created>1666981651894</created>
+      <option name="number" value="00084" />
+      <option name="presentableId" value="LOCAL-00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1666981651894</updated>
+    </task>
+    <task id="LOCAL-00085" summary="14, 21 задание (доработка).">
+      <created>1666981706539</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1666981706539</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -550,8 +551,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="9 задание с доработкой от 26.08" />
-    <MESSAGE value="13 задание с доработкой от 26.08" />
     <MESSAGE value="15 задание с доработкой от 27.08" />
     <MESSAGE value="15 задание доработка от 27.08" />
     <MESSAGE value="15 задание. параметризация.доработка от 27.08" />
@@ -575,7 +574,9 @@
     <MESSAGE value="19 задание" />
     <MESSAGE value="доработки 14 задание." />
     <MESSAGE value="доработки 21 задание." />
-    <option name="LAST_COMMIT_MESSAGE" value="доработки 21 задание." />
+    <MESSAGE value="доработки 14 и 21 задания." />
+    <MESSAGE value="14, 21 задание (доработка)." />
+    <option name="LAST_COMMIT_MESSAGE" value="14, 21 задание (доработка)." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
