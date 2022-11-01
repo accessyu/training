@@ -15,6 +15,7 @@ def test_delete_first_contact(app, db, check_ui):
         assert sorted(old_contact, key=Contact.id_or_max) == sorted(new_contact, key=Contact.id_or_max)
 
 
+
 def test_delete_random_contact(app, db):
     if app.contact.count == 0:
         app.contact.create(Contact(lastname = "1",firstname="w", address="a"))
