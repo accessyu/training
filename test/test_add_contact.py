@@ -13,7 +13,12 @@ def test_add_contact(app, data_contacts, check_ui, db):
         assert len(new_ids) == 1
         contact.id = new_ids.pop()
         old_contacts.append(contact)
-        assert sorted(old_contacts) == sorted(new_contacts)
+        if check_ui:
+                assert sorted(old_contacts, key=Contact.id_or_max) == sorted(new_contacts, key=Contact.id_or_max)
+
+
+
+
 
 
 

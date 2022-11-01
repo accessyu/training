@@ -136,11 +136,15 @@ class ContactHelper:
 
 
     def get_contact_info_from_edit_page(self, index):
+        #wd = self.app.wd
+        #table = wd.find_element_by_id("maintable")
+        #row = table.find_elements_by_tag_name("tr")[index + 1]
+        #cols = row.find_elements_by_tag_name("td")
+        #cols[7].click()
         wd = self.app.wd
-        table = wd.find_element_by_id("maintable")
-        row = table.find_elements_by_tag_name("tr")[index + 1]
-        cols = row.find_elements_by_tag_name("td")
-        cols[7].click()
+        self.app.open_home_page()
+        self.find_edit_button_by_index(index)
+        id = wd.find_element_by_name("id").get_attribute("value")
         homephone =  wd.find_element_by_name("home").get_attribute("value")
         workphone = wd.find_element_by_name("work").get_attribute("value")
         mobilephone = wd.find_element_by_name("mobile").get_attribute("value")
