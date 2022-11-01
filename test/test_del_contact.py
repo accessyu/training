@@ -1,7 +1,6 @@
 from model.contact import Contact
 import random
 
-
 def test_del_contact(app, db, check_ui):
     if len(db.get_contact_list()) == 0:
         app.contact.create(Contact(firstname="Test"))
