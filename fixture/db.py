@@ -1,6 +1,7 @@
-import mysql.connector
+import pymysql
 from model.group import Group
 from model.contact import Contact
+
 
 class DbFixture:
 
@@ -9,53 +10,48 @@ class DbFixture:
         self.name = name
         self.user = user
         self.password = password
-        self.connection = mysql.connector.connect(host=host, database=name, user=user,
-                                                  password=password, autocommit=True)
+        self.connection = pymysql.connect(host=host, database=name,  user=user, password=password, autocommit=True)
 
     def get_group_list(self):
         list = []
         cursor = self.connection.cursor()
         try:
-            cursor.execute("select group_id, group_name, group_header, group_footer from group_list")
+            cursor.execute('select group_id, group_name, group_header, group_footer from group_list')
             for row in cursor:
                 (id, name, header, footer) = row
                 list.append(Group(id=str(id), name=name, header=header, footer=footer))
         finally:
             cursor.close()
-        return  list
+        return list
+
+    def get_contact_in_group_list(self):
+        keys = ['id', 'group_id']
+        pairs = []
+        cursor = self.connection.cursor()
+        try:
+            cursor.execute("select id, group_id from address_in_groups where deprecated = '0000-00-00 00:00:00'")
+            for row in cursor:
+                (id,group_id) = row
+                dictionary = dict(zip(keys, row))
+                pairs.append(dictionary)
+        finally:
+            cursor.close()
+        return pairs
 
     def get_contact_list(self):
         list = []
         cursor = self.connection.cursor()
         try:
-            cursor.execute("select id, firstname, lastname, address, home, mobile, work,phone2, email, email2, email3 "
-                           " from addressbook "
-                           "where deprecated='0000-00-00 00:00:00'")
+            cursor.execute("select id, firstname, lastname, address, home, mobile, work, email, email2, email3,"
+                           "phone2 from addressbook where deprecated = '0000-00-00 00:00:00'")
             for row in cursor:
-                (id, firstname, lastname, address, home, mobile, work, phone2, email, email2, email3) = row
-                list.append(Contact(id=str(id), firstname=firstname, lastname=lastname,
-                                    address=address, home=home, mobile=mobile, work=work, phone2=phone2,
-                                    email1=email, email2=email2, email3=email3 ))
+                (id, firstname, lastname, address, homephone, mobilephone, workphone, email, email2, email3, phone2) = row
+                list.append(Contact(id=str(id), firstname=firstname, lastname=lastname, home_phone=homephone, cell_phone=mobilephone, work_phone=workphone,
+                                    address=address, email_1=email, email_2=email2, email_3=email3, secondary_phone=phone2))
         finally:
             cursor.close()
         return list
+
 
     def destroy(self):
         self.connection.close()
-
-    def get_contacts_in_group(self, g):
-        list = []
-        cursor = self.connection.cursor()
-        try:
-            cursor.execute("select ab.id, firstname, lastname "
-                           "from addressbook ab join address_in_groups aig on (ab.id = aig.id)"
-                           " where ab.deprecated='0000-00-00 00:00:00' and aig.group_id=%s" % g.id)
-
-            for row in cursor:
-                (id, firstname, lastname) = row
-                list.append(Contact(id=str(id), firstname=firstname, lastname=lastname))
-        finally:
-            cursor.close()
-        return list
-
-
