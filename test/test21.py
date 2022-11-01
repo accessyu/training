@@ -1,5 +1,6 @@
 import re
 
+
 def test_phones_on_home_page(app, db):
     contacts1 = app.contact.get_contact_list()
     contacts2 = db.get_contact_list()
