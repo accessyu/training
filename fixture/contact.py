@@ -207,6 +207,7 @@ class ContactHelper:
         return Contact(home_phone=home_phone, cell_phone=cell_phone,
                        work_phone=work_phone, secondary_phone=secondary_phone)
 
+
     def get_contact_list_from_group_page(self,id):
         if self.contact_cache is None:
             wd = self.app.wd
@@ -231,7 +232,6 @@ class ContactHelper:
         wd.switch_to.alert.accept()
         self.app.open_home_page()
         self.contact_cache = None
-
 
 
     def clear(self, s):
