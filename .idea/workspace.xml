@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8e32976-0bd1-4687-8b27-0cc53bde177f" name="Changes" comment="20 задание (del, modify contact)">
+    <list default="true" id="b8e32976-0bd1-4687-8b27-0cc53bde177f" name="Changes" comment="14 задание">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_phones.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_phones.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,13 +182,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1656244719839</updated>
-    </task>
-    <task id="LOCAL-00045" summary="2 задание доработанное">
-      <created>1660721228378</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1660721228378</updated>
     </task>
     <task id="LOCAL-00046" summary="2 задание доработанное с учетом замечаний">
       <created>1660721466354</created>
@@ -527,7 +519,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667330246141</updated>
     </task>
-    <option name="localTasksCounter" value="94" />
+    <task id="LOCAL-00094" summary="14 задание">
+      <created>1667389870207</created>
+      <option name="number" value="00094" />
+      <option name="presentableId" value="LOCAL-00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1667389870207</updated>
+    </task>
+    <option name="localTasksCounter" value="95" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -556,7 +555,6 @@
     <MESSAGE value="ошибка при запуске теста test_phones.py" />
     <MESSAGE value="оставшиеся задания" />
     <MESSAGE value="21 задание" />
-    <MESSAGE value="14 задание" />
     <MESSAGE value="19 задание" />
     <MESSAGE value="доработки 14 задание." />
     <MESSAGE value="доработки 21 задание." />
@@ -567,7 +565,8 @@
     <MESSAGE value="20 задание c правками" />
     <MESSAGE value="20 задание c правками (del и modify contact)" />
     <MESSAGE value="20 задание (del, modify contact)" />
-    <option name="LAST_COMMIT_MESSAGE" value="20 задание (del, modify contact)" />
+    <MESSAGE value="14 задание" />
+    <option name="LAST_COMMIT_MESSAGE" value="14 задание" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
