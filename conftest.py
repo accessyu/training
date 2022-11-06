@@ -17,7 +17,6 @@ def load_config(file):
             target = json.load(f)
     return target
 
-
 @pytest.fixture
 def app(request):
     global fixture
@@ -28,7 +27,6 @@ def app(request):
     fixture.session.ensure_login(username=web_config['username'], password=web_config['password'])
     return fixture
 
-
 @pytest.fixture(scope="session")
 def db(request):
     db_config = load_config(request.config.getoption("--target"))['db']
@@ -37,8 +35,6 @@ def db(request):
         dbfixture.destroy()
     request.addfinalizer(fin)
     return dbfixture
-
-
 
 @pytest.fixture(scope='session', autouse=True)
 def stop(request):
@@ -52,13 +48,10 @@ def stop(request):
 def check_ui(request):
     request.config.getoption("--check_ui")
 
-
-
 def pytest_addoption(parser):
     parser.addoption("--browser", action="store", default="chrome")
     parser.addoption("--target", action="store", default="target.json")
     parser.addoption("--check_ui", action="store_true")
-
 
 def pytest_generate_tests(metafunc):
     for fixture in metafunc.fixturenames:
@@ -68,7 +61,6 @@ def pytest_generate_tests(metafunc):
         elif fixture.startswith("json_"):
             testdata = load_from_json(fixture[5:])
             metafunc.parametrize(fixture, testdata, ids=[str(x) for x in testdata])
-
 
 def load_from_module(module):
     return importlib.import_module("data.%s" % module).testdata
