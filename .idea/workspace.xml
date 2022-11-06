@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b8e32976-0bd1-4687-8b27-0cc53bde177f" name="Changes" comment="правки">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_add_contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_add_contact.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_del_contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_del_contact.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test_modify_contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_modify_contact.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_add_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_add_group.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_del_group.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_del_group.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,20 +187,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1656244719839</updated>
-    </task>
-    <task id="LOCAL-00051" summary="15 тест(3)">
-      <created>1660831681189</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1660831681189</updated>
-    </task>
-    <task id="LOCAL-00052" summary="15 тест(4)">
-      <created>1660840922882</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1660840922882</updated>
     </task>
     <task id="LOCAL-00053" summary="13 задание доработанное">
       <created>1660893778058</created>
@@ -533,7 +517,21 @@
       <option name="project" value="LOCAL" />
       <updated>1667719458877</updated>
     </task>
-    <option name="localTasksCounter" value="100" />
+    <task id="LOCAL-00100" summary="правки">
+      <created>1667721268825</created>
+      <option name="number" value="00100" />
+      <option name="presentableId" value="LOCAL-00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1667721268826</updated>
+    </task>
+    <task id="LOCAL-00101" summary="правки">
+      <created>1667721336623</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1667721336624</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
