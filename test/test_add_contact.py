@@ -2,8 +2,9 @@
 from model.contact import Contact
 
 
-def test_add_contact(app, data_contacts, check_ui, db):
-        contact = data_contacts
+def test_add_contact(app, data_contacts, json_contacts, check_ui, db):
+        #contact = Contact.make_from_dict(json_contacts)
+        contact = json_contacts
         old_contacts = db.get_contact_list()
         app.contact.create(contact)
         app.contact.return_to_contact()
