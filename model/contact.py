@@ -1,41 +1,59 @@
+from sys import maxsize
+
 class Contact:
 
-    def __init__(self, id= None, all_emails_from_home_page=None,
-                 firstname= "", middlename= None, lastname= "", nickname= None,title= None,
-                 company= None,address= "",home= None,mobile= None,work= None,fax= None,email1 = None,email2 = None,
-                 email3 =None,bday= None,bmonth= None,byear= None,address2= None,phone2= None,notes= None, all_phones_from_home_page=None):
-        self.id = id
-        self.firstname = firstname
+    def __init__(self, name=None, middlename=None, lastname=None, nickname=None, title=None, company=None, address_1=None, phone_home=None, mobile_home=None, phone_work=None, email_1=None, email_2=None,
+                 email_3=None, homepage=None, bday=None, bmonth=None, byear=None, aday=None, amonth=None, ayear=None, address_2=None, phone_home_2=None, notes=None, fax=None, id=None, all_phones_from_home_page=None, all_emails_from_home_page=None):
+        self.name = name
         self.middlename = middlename
         self.lastname = lastname
         self.nickname = nickname
         self.title = title
         self.company = company
-        self.address = address
-        self.home = home
-        self.mobile = mobile
-        self.work = work
+        self.address_1 = address_1
+        self.phone_home = phone_home
+        self.mobile_home = mobile_home
+        self.phone_work = phone_work
         self.fax = fax
-        self.email1 = email1
-        self.email2 = email2
-        self.email3 = email3
+        self.email_1 = email_1
+        self.email_2 = email_2
+        self.email_3 = email_3
+        self.homepage = homepage
         self.bday = bday
         self.bmonth = bmonth
         self.byear = byear
-        self.address2 = address2
-        self.phone2 = phone2
+        self.aday = aday
+        self.amonth = amonth
+        self.ayear = ayear
+        self.address_2 = address_2
+        self.phone_home_2 = phone_home_2
         self.notes = notes
+        self.id = id
         self.all_phones_from_home_page = all_phones_from_home_page
         self.all_emails_from_home_page = all_emails_from_home_page
 
-    def __eq__(self, other):
-        return ((self.id == other.id) and
-        (self.lastname == other.lastname) and
-        (self.firstname == other.firstname) and
-        (self.address == other.address))
 
-
-    def  __lt__ (self,other):
-        return self.id  < other.id
     def __repr__(self):
-        return '"'+", ".join([self.lastname, self.firstname, self.address]) + '"'
+        return "%s:%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s" % (self.id, self.name, self.middlename, self.lastname, self.nickname, self.title, self.company, self.address_1,
+                      self.phone_home, self.mobile_home, self.phone_work, self.fax,
+                      self.email_1, self.email_2, self.email_3,
+                      self.homepage,
+                      self.bday, self.bmonth, self.byear, self.aday, self.amonth, self.ayear,
+                      self.address_2, self.phone_home_2,
+                      self.notes)
+
+
+    def __eq__(self, other):
+        return (self.id is None or other.id is None or self.id == other.id) and self.name == other.name
+
+
+    def id_or_max(self):
+        if self.id:
+            return int(self.id)
+        else:
+            return maxsize
+
+
+
+
+

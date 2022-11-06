@@ -1,4 +1,3 @@
-
 from model.group import Group
 
 class GroupHelper:
@@ -101,5 +100,4 @@ class GroupHelper:
                 groups.append(Group(name=text, id=id))
             self.group_cache=groups
         return self.group_cache
-
 
