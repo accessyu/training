@@ -14,6 +14,7 @@ def test_modify_contact_name(app, db, check_ui):
     if check_ui:
         assert sorted(old_contacts, key=Contact.id_or_max) == sorted(new_contacts, key=Contact.id_or_max)
 
+
 def test_modify_random_contact(app, db, check_ui):
     if app.contact.count == 0:
         app.contact.create(Contact(lastname = "1",firstname="w", address="a"))

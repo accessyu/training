@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from model.contact import Contact
 
+
 def test_add_contact(app, data_contacts, check_ui, db):
         contact = data_contacts
         old_contacts = db.get_contact_list()

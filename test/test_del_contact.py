@@ -1,6 +1,7 @@
 from model.contact import Contact
 from random import randrange
 
+
 def test_delete_first_contact(app, db, check_ui):
     if app.contact.count == 0:
         app.contact.create(Contact(lastname = "1",firstname="w", address="a"))
