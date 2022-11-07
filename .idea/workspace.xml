@@ -4,15 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8e32976-0bd1-4687-8b27-0cc53bde177f" name="Changes" comment="доработка 19 задание от 7.11">
+    <list default="true" id="b8e32976-0bd1-4687-8b27-0cc53bde177f" name="Changes" comment="доработка 14 задание от 7.11">
       <change afterPath="$PROJECT_DIR$/conftest1.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/fixture/contact1.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/fixture/db1.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/model/contact1" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/test/addc.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/test/test_db_matches_ui1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixture/contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/contact.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,22 +36,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/j_ryadnova/PycharmProjects/training/data&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/j_ryadnova/PycharmProjects/training/test",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;ChangesTree.GroupingKeys&quot;: [
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\j_ryadnova\PycharmProjects\training\data" />
       <recent name="C:\Users\j_ryadnova\PycharmProjects\training\test" />
+      <recent name="C:\Users\j_ryadnova\PycharmProjects\training\data" />
       <recent name="C:\Users\j_ryadnova\PycharmProjects\training\model" />
       <recent name="C:\Users\j_ryadnova\PycharmProjects\training\fixture" />
       <recent name="C:\Users\j_ryadnova\PycharmProjects\training" />
@@ -192,13 +190,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1656244719839</updated>
-    </task>
-    <task id="LOCAL-00059" summary="15 задание доработка от 27.08">
-      <created>1661622119176</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1661622119176</updated>
     </task>
     <task id="LOCAL-00060" summary="15 задание. параметризация.доработка от 27.08">
       <created>1661622172073</created>
@@ -536,7 +527,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667851186324</updated>
     </task>
-    <option name="localTasksCounter" value="108" />
+    <task id="LOCAL-00108" summary="доработка 14 задание от 7.11">
+      <created>1667855388655</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1667855388655</updated>
+    </task>
+    <option name="localTasksCounter" value="109" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -551,7 +549,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="18 задание.от 10.09" />
     <MESSAGE value="9 задание от 12.09 с правками." />
     <MESSAGE value="9 задание от 15.09 с правками." />
     <MESSAGE value="14 задание от 15.09 с правками." />
@@ -576,7 +573,8 @@
     <MESSAGE value="правки" />
     <MESSAGE value="доработка 19 задание" />
     <MESSAGE value="доработка 19 задание от 7.11" />
-    <option name="LAST_COMMIT_MESSAGE" value="доработка 19 задание от 7.11" />
+    <MESSAGE value="доработка 14 задание от 7.11" />
+    <option name="LAST_COMMIT_MESSAGE" value="доработка 14 задание от 7.11" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
