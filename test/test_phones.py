@@ -44,6 +44,7 @@ def clear_space(s):
 def clear_email(s):
     return s.strip()
 
+
 def merge_phones_like_on_home_page(contact):
     return "\n".join(filter(lambda x: x != "",
                             map(lambda x: clear(x),

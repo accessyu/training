@@ -255,6 +255,7 @@ class ContactHelper:
                        #email_1=email_1, email_2=email_2, email_3=email_3)##
 
 
+
     def get_contact_info_from_edit_page(self, index):
         wd = self.app.wd
         self.app.open_home_page()
