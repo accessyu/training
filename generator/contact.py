@@ -17,6 +17,7 @@ except getopt.GetoptError as err:
 n = 5
 f = "data/contacts.json"
 
+
 def random_string(prefix, maxlen):
     symbols = string.ascii_letters + string.digits + " "*10
     s= prefix + "".join([random.choice(symbols) for i in range(random.randrange(maxlen))])

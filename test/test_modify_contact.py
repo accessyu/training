@@ -15,6 +15,7 @@ def test_modify_contact_name(app, db, json_contacts, check_ui):
     if check_ui:
         assert sorted(old_contacts, key=Contact.id_or_max) == sorted(new_contacts, key=Contact.id_or_max)
 
+
 def test_modify_random_contact(app, db, json_contacts, check_ui):
     contact = json_contacts
     if app.contact.count == 0:

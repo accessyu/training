@@ -16,6 +16,7 @@ def test_delete_first_contact(app, db, json_contacts, check_ui):
     if check_ui:
         assert sorted(old_contact, key=Contact.id_or_max) == sorted(new_contact, key=Contact.id_or_max)
 
+
 def test_delete_random_contact(app, db, json_contacts, check_ui):
     contact = json_contacts
     if app.contact.count == 0:

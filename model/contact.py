@@ -3,8 +3,10 @@ from sys import maxsize
 class Contact:
 
     def __init__(self, name=None, middlename=None, lastname=None, nickname=None, title=None, company=None, address_1=None, phone_home=None, mobile_home=None, phone_work=None, email_1=None, email_2=None,
-                 email_3=None, homepage=None, bday=None, bmonth=None, byear=None, aday=None, amonth=None, ayear=None, address_2=None, phone_home_2=None, notes=None, fax=None, id=None, all_phones_from_home_page=None, all_emails_from_home_page=None):
-        self.name = name
+                 email_3=None, homepage=None, bday=None, bmonth=None, byear=None, aday=None,
+                 amonth=None, ayear=None, address_2=None, phone_home_2=None, notes=None, fax=None, id=None, all_phones_from_home_page=None, all_emails_from_home_page=None):
+
+        self.firstname = firstname
         self.middlename = middlename
         self.lastname = lastname
         self.nickname = nickname
@@ -34,7 +36,7 @@ class Contact:
 
 
     def __repr__(self):
-        return "%s:%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s" % (self.id, self.name, self.middlename, self.lastname, self.nickname, self.title, self.company, self.address_1,
+        return "%s:%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s" % (self.id, self.firstname, self.middlename, self.lastname, self.nickname, self.title, self.company, self.address_1,
                       self.phone_home, self.mobile_home, self.phone_work, self.fax,
                       self.email_1, self.email_2, self.email_3,
                       self.homepage,
@@ -44,7 +46,7 @@ class Contact:
 
 
     def __eq__(self, other):
-        return (self.id is None or other.id is None or self.id == other.id) and self.name == other.name
+        return (self.id is None or other.id is None or self.id == other.id) and self.firstname == other.firstname
 
 
     def id_or_max(self):

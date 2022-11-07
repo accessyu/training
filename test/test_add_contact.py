@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from model.contact import Contact
 
-def test_add_contact(app, data_contacts, json_contacts, check_ui, db):
+def test_add_contact(app, json_contacts, check_ui, db):
         #contact = Contact.make_from_dict(json_contacts)
         contact = json_contacts
         old_contacts = db.get_contact_list()

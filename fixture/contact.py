@@ -110,7 +110,6 @@ class ContactHelper:
         wd = self.app.wd
         wd.find_elements_by_name("selected[]")[index].click()
 
-
     def delete_contact_by_index(self, index):
         wd = self.app.wd
         self.app.open_home_page()
