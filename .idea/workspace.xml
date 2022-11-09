@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b8e32976-0bd1-4687-8b27-0cc53bde177f" name="Changes" comment="доработка 14 задание от 7.11">
-      <change afterPath="$PROJECT_DIR$/conftest1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fixture/contact1.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/fixture/db1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/contact1" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/test/addc.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/test/test_db_matches_ui1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixture/contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/contact.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fixture/session.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/session.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generator/contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/generator/contact.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/contact.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +43,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/j_ryadnova/PycharmProjects/training/test",
+    "last_opened_file_path": "C:/Users/j_ryadnova/PycharmProjects/training/data",
     "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   },
   "keyToStringList": {
@@ -51,11 +53,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\j_ryadnova\PycharmProjects\training\test" />
       <recent name="C:\Users\j_ryadnova\PycharmProjects\training\data" />
-      <recent name="C:\Users\j_ryadnova\PycharmProjects\training\model" />
       <recent name="C:\Users\j_ryadnova\PycharmProjects\training\fixture" />
       <recent name="C:\Users\j_ryadnova\PycharmProjects\training" />
+      <recent name="C:\Users\j_ryadnova\PycharmProjects\training\test" />
+      <recent name="C:\Users\j_ryadnova\PycharmProjects\training\model" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\j_ryadnova\PycharmProjects\training\model" />
@@ -63,7 +65,7 @@
       <recent name="C:\Users\j_ryadnova\PycharmProjects\training\fixture" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.pytest in test_phones.py">
+  <component name="RunManager" selected="Python tests.pytest in test_add_contact.py">
     <configuration name="test_add_group" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="training" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -117,6 +119,22 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest in test_add_group.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="training" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/test/test_add_group.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <configuration name="pytest in test_db_matches_ui1.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="training" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -130,22 +148,6 @@
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;$PROJECT_DIR$/test/test_db_matches_ui1.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest in test_del_group.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="training" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/test/test_del_group.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
@@ -167,19 +169,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.test_add_group" />
+      <item itemvalue="Python tests.pytest in test_add_group.py" />
       <item itemvalue="Python tests.pytest in addc.py" />
       <item itemvalue="Python tests.pytest in test_add_contact.py" />
       <item itemvalue="Python tests.pytest in test_db_matches_ui1.py" />
       <item itemvalue="Python tests.pytest in test_phones.py" />
-      <item itemvalue="Python tests.pytest in test_del_group.py" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.pytest in test_phones.py" />
         <item itemvalue="Python tests.pytest in test_add_contact.py" />
+        <item itemvalue="Python tests.pytest in test_phones.py" />
+        <item itemvalue="Python tests.pytest in test_add_group.py" />
         <item itemvalue="Python tests.pytest in addc.py" />
         <item itemvalue="Python tests.pytest in test_db_matches_ui1.py" />
-        <item itemvalue="Python tests.pytest in test_del_group.py" />
       </list>
     </recent_temporary>
   </component>
@@ -191,20 +193,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1656244719839</updated>
-    </task>
-    <task id="LOCAL-00061" summary="16 задание.доработка от 27.08">
-      <created>1661622769047</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1661622769054</updated>
-    </task>
-    <task id="LOCAL-00062" summary="9 задание.доработка от 28.08">
-      <created>1661702074462</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1661702074463</updated>
     </task>
     <task id="LOCAL-00063" summary="11 задание.доработка от 28.08">
       <created>1661714070287</created>
@@ -535,7 +523,21 @@
       <option name="project" value="LOCAL" />
       <updated>1667855644368</updated>
     </task>
-    <option name="localTasksCounter" value="110" />
+    <task id="LOCAL-00110" summary="доработка 14 задание от 7.11">
+      <created>1667856333020</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1667856333020</updated>
+    </task>
+    <task id="LOCAL-00111" summary="доработка 14 задание от 7.11">
+      <created>1667856358029</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1667856358029</updated>
+    </task>
+    <option name="localTasksCounter" value="112" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -30,9 +30,11 @@ def random_contact():
                       title="11", company="12", address="23", home="44", mobile="5", work="7", fax="9",
                       email="8", bday="2", bmonth="May", byear="1", address2="1", phone2="1", notes="1")
 
-testdata = [Contact(lastname="", firstname="", address="")] + [
-   random_contact() for _ in range(n)
-]
+testdata =  [random_contact() for _ in range(n)]
+
+#testdata = [Contact(lastname="", firstname="", address="")] + [
+   #random_contact() for _ in range(n)#
+#]#
 
 file = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", f)
 
