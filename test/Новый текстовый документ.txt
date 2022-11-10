@@ -1,0 +1,123 @@
+C:\Users\j_ryadnova\PycharmProjects\training\venv\Scripts\python.exe "C:\Program Files\JetBrains\PyCharm Community Edition 2022.1.2\plugins\python-ce\helpers\pycharm\_jb_pytest_runner.py" --path C:/Users/j_ryadnova/PycharmProjects/training/test/test_phones.py
+Testing started at 10:01 ...
+Launching pytest with arguments C:/Users/j_ryadnova/PycharmProjects/training/test/test_phones.py --no-header --no-summary -q in C:\Users\j_ryadnova\PycharmProjects\training\test
+
+============================= test session starts =============================
+collecting ... collected 3 items
+
+test_phones.py::test_phones_on_home_page FAILED                          [ 33%]
+test_phones.py:2 (test_phones_on_home_page)
+app = <fixture.application.Application object at 0x000002127964AC50>
+contact_from_home_page = None
+
+    def  test_phones_on_home_page(app, contact_from_home_page=None):
+>       contact_from_home_page = app.contact.get_contact_list() [0]
+
+test_phones.py:4:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <fixture.contact.ContactHelper object at 0x0000021279649ED0>
+
+    def get_contact_list(self):
+        if self.contact_cache is not None:
+            return self.contact_cache
+        wd = self.app.wd
+        l = []
+        table = wd.find_element_by_id("maintable")
+        rows = table.find_elements_by_tag_name("tr")
+        for row in rows[1:]:
+            cells = row.find_elements_by_tag_name("td")
+            id = cells[0].find_element_by_tag_name("input").get_attribute("value")
+            #all_phones = cells[5].text.splitlines()
+            all_phones = cells[5].text.splitlines()
+            homephone=all_phones[0] if len(all_phones) > 0 else ""
+            mobilephone = all_phones[1] if len(all_phones) > 1 else ""
+            workphone = all_phones[2] if len(all_phones) > 2 else ""
+            secondaryphone = all_phones[3] if len(all_phones) > 3 else ""
+            all_emails = cells[4].text.splitlines()
+            email1 = all_emails[0] if len(all_emails) > 0 else ""
+            email2 = all_emails[1] if len(all_emails) > 1 else ""
+            email3 = all_emails[2] if len(all_emails) > 2 else ""
+>           l.append(Contact(id=id, firstname=cells[2].text, lastname=cells[1].text, all_emails_from_home_page=cells[4].text,
+                             home=homephone, mobile=mobilephone,work=workphone,all_phones_from_home_page=cells[5].text,
+                             phone2=secondaryphone, email1 = email1, email2 = email2, email3 = email3 ,address=cells[3].text))
+E           TypeError: Contact.__init__() got an unexpected keyword argument 'home'
+
+..\fixture\contact.py:60: TypeError
+
+test_phones.py::test_phones_on_contact_view_page FAILED                  [ 66%]
+test_phones.py:12 (test_phones_on_contact_view_page)
+app = <fixture.application.Application object at 0x000002127964AC50>
+
+    def test_phones_on_contact_view_page(app):
+>       contact_from_view_page = app.contact.get_contact_from_view_page(0)
+
+test_phones.py:14:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <fixture.contact.ContactHelper object at 0x0000021279649ED0>, index = 0
+
+    def get_contact_from_view_page(self, index):
+        wd = self.app.wd
+        self.open_contact_view_by_index(index)
+        text=wd.find_element_by_id("content").text
+        homephone = re.search("H: (.*)", text).group(1) if "H: " in text else ""
+        workphone = re.search("W: (.*)", text).group(1) if "W: " in text else ""
+        mobilephone = re.search("M: (.*)", text).group(1) if "M: " in text else ""
+        secondaryphone = re.search("P: (.*)", text).group(1) if "P: " in text else ""
+        content=wd.find_element_by_id("content")
+        emails=[i.text for  i in content.find_elements_by_tag_name("a")]
+        while len(emails)<3:
+            emails.append("")
+        self.return_to_contact()
+>       return Contact(home=homephone, mobile=mobilephone,
+                       work=workphone,  phone2=secondaryphone,email1 = emails[0], email2 = emails[1], email3 = emails[2])
+E       TypeError: Contact.__init__() got an unexpected keyword argument 'home'
+
+..\fixture\contact.py:133: TypeError
+
+test_phones.py::test_phones_on_home_page_db FAILED                       [100%]
+test_phones.py:20 (test_phones_on_home_page_db)
+app = <fixture.application.Application object at 0x000002127964AC50>
+db = <fixture.db.DbFixture object at 0x0000021279649060>
+
+    def test_phones_on_home_page_db(app, db):
+>       contacts_from_home_page = app.contact.get_contact_list()
+
+test_phones.py:22:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = <fixture.contact.ContactHelper object at 0x0000021279649ED0>
+
+    def get_contact_list(self):
+        if self.contact_cache is not None:
+            return self.contact_cache
+        wd = self.app.wd
+        l = []
+        table = wd.find_element_by_id("maintable")
+        rows = table.find_elements_by_tag_name("tr")
+        for row in rows[1:]:
+            cells = row.find_elements_by_tag_name("td")
+            id = cells[0].find_element_by_tag_name("input").get_attribute("value")
+            #all_phones = cells[5].text.splitlines()
+            all_phones = cells[5].text.splitlines()
+            homephone=all_phones[0] if len(all_phones) > 0 else ""
+            mobilephone = all_phones[1] if len(all_phones) > 1 else ""
+            workphone = all_phones[2] if len(all_phones) > 2 else ""
+            secondaryphone = all_phones[3] if len(all_phones) > 3 else ""
+            all_emails = cells[4].text.splitlines()
+            email1 = all_emails[0] if len(all_emails) > 0 else ""
+            email2 = all_emails[1] if len(all_emails) > 1 else ""
+            email3 = all_emails[2] if len(all_emails) > 2 else ""
+>           l.append(Contact(id=id, firstname=cells[2].text, lastname=cells[1].text, all_emails_from_home_page=cells[4].text,
+                             home=homephone, mobile=mobilephone,work=workphone,all_phones_from_home_page=cells[5].text,
+                             phone2=secondaryphone, email1 = email1, email2 = email2, email3 = email3 ,address=cells[3].text))
+E           TypeError: Contact.__init__() got an unexpected keyword argument 'home'
+
+..\fixture\contact.py:60: TypeError
+
+
+================== 3 failed, 31 warnings in 75.83s (0:01:15) ==================
+
+Process finished with exit code 1
+
