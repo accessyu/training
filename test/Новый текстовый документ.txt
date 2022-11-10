@@ -1,14 +1,13 @@
 C:\Users\j_ryadnova\PycharmProjects\training\venv\Scripts\python.exe "C:\Program Files\JetBrains\PyCharm Community Edition 2022.1.2\plugins\python-ce\helpers\pycharm\_jb_pytest_runner.py" --path C:/Users/j_ryadnova/PycharmProjects/training/test/test_phones.py
-Testing started at 10:01 ...
+Testing started at 21:59 ...
 Launching pytest with arguments C:/Users/j_ryadnova/PycharmProjects/training/test/test_phones.py --no-header --no-summary -q in C:\Users\j_ryadnova\PycharmProjects\training\test
-
 
 ============================= test session starts =============================
 collecting ... collected 3 items
 
 test_phones.py::test_phones_on_home_page FAILED                          [ 33%]
 test_phones.py:2 (test_phones_on_home_page)
-app = <fixture.application.Application object at 0x000002127964AC50>
+app = <fixture.application.Application object at 0x000001F76321ACE0>
 contact_from_home_page = None
 
     def  test_phones_on_home_page(app, contact_from_home_page=None):
@@ -16,71 +15,200 @@ contact_from_home_page = None
 
 test_phones.py:4:
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\fixture\contact.py:45: in get_contact_list
+    table = wd.find_element_by_id("maintable")
+..\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py:478: in find_element_by_id
+    return self.find_element(by=By.ID, value=id_)
+..\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py:1251: in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+..\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py:430: in execute
+    self.error_handler.check_response(response)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-self = <fixture.contact.ContactHelper object at 0x0000021279649ED0>
+self = <selenium.webdriver.remote.errorhandler.ErrorHandler object at 0x000001F76321AE00>
+response = {'status': 404, 'value': '{"value":{"error":"no such element","message":"Unable to locate element: [id=\\"maintable\\"...ntent/shared/webdriver/Errors.jsm:404:5\\nelement.find/</<@chrome://remote/content/marionette/element.js:291:16\\n"}}'}
 
-    def get_contact_list(self):
-        if self.contact_cache is not None:
-            return self.contact_cache
-        wd = self.app.wd
-        l = []
-        table = wd.find_element_by_id("maintable")
-        rows = table.find_elements_by_tag_name("tr")
-        for row in rows[1:]:
-            cells = row.find_elements_by_tag_name("td")
-            id = cells[0].find_element_by_tag_name("input").get_attribute("value")
-            #all_phones = cells[5].text.splitlines()
-            all_phones = cells[5].text.splitlines()
-            homephone=all_phones[0] if len(all_phones) > 0 else ""
-            mobilephone = all_phones[1] if len(all_phones) > 1 else ""
-            workphone = all_phones[2] if len(all_phones) > 2 else ""
-            secondaryphone = all_phones[3] if len(all_phones) > 3 else ""
-            all_emails = cells[4].text.splitlines()
-            email1 = all_emails[0] if len(all_emails) > 0 else ""
-            email2 = all_emails[1] if len(all_emails) > 1 else ""
-            email3 = all_emails[2] if len(all_emails) > 2 else ""
->           l.append(Contact(id=id, firstname=cells[2].text, lastname=cells[1].text, all_emails_from_home_page=cells[4].text,
-                             home=homephone, mobile=mobilephone,work=workphone,all_phones_from_home_page=cells[5].text,
-                             phone2=secondaryphone, email1 = email1, email2 = email2, email3 = email3 ,address=cells[3].text))
-E           TypeError: Contact.__init__() got an unexpected keyword argument 'home'
+    def check_response(self, response: Dict[str, Any]) -> None:
+        """
+        Checks that a JSON response from the WebDriver does not have an error.
 
-..\fixture\contact.py:60: TypeError
+        :Args:
+         - response - The JSON response from the WebDriver server as a dictionary
+           object.
+
+        :Raises: If the response contains an error message.
+        """
+        status = response.get('status', None)
+        if not status or status == ErrorCode.SUCCESS:
+            return
+        value = None
+        message = response.get("message", "")
+        screen: str = response.get("screen", "")
+        stacktrace = None
+        if isinstance(status, int):
+            value_json = response.get('value', None)
+            if value_json and isinstance(value_json, str):
+                import json
+                try:
+                    value = json.loads(value_json)
+                    if len(value.keys()) == 1:
+                        value = value['value']
+                    status = value.get('error', None)
+                    if not status:
+                        status = value.get("status", ErrorCode.UNKNOWN_ERROR)
+                        message = value.get("value") or value.get("message")
+                        if not isinstance(message, str):
+                            value = message
+                            message = message.get('message')
+                    else:
+                        message = value.get('message', None)
+                except ValueError:
+                    pass
+
+        exception_class: Type[WebDriverException]
+        if status in ErrorCode.NO_SUCH_ELEMENT:
+            exception_class = NoSuchElementException
+        elif status in ErrorCode.NO_SUCH_FRAME:
+            exception_class = NoSuchFrameException
+        elif status in ErrorCode.NO_SUCH_SHADOW_ROOT:
+            exception_class = NoSuchShadowRootException
+        elif status in ErrorCode.NO_SUCH_WINDOW:
+            exception_class = NoSuchWindowException
+        elif status in ErrorCode.STALE_ELEMENT_REFERENCE:
+            exception_class = StaleElementReferenceException
+        elif status in ErrorCode.ELEMENT_NOT_VISIBLE:
+            exception_class = ElementNotVisibleException
+        elif status in ErrorCode.INVALID_ELEMENT_STATE:
+            exception_class = InvalidElementStateException
+        elif status in ErrorCode.INVALID_SELECTOR \
+                or status in ErrorCode.INVALID_XPATH_SELECTOR \
+                or status in ErrorCode.INVALID_XPATH_SELECTOR_RETURN_TYPER:
+            exception_class = InvalidSelectorException
+        elif status in ErrorCode.ELEMENT_IS_NOT_SELECTABLE:
+            exception_class = ElementNotSelectableException
+        elif status in ErrorCode.ELEMENT_NOT_INTERACTABLE:
+            exception_class = ElementNotInteractableException
+        elif status in ErrorCode.INVALID_COOKIE_DOMAIN:
+            exception_class = InvalidCookieDomainException
+        elif status in ErrorCode.UNABLE_TO_SET_COOKIE:
+            exception_class = UnableToSetCookieException
+        elif status in ErrorCode.TIMEOUT:
+            exception_class = TimeoutException
+        elif status in ErrorCode.SCRIPT_TIMEOUT:
+            exception_class = TimeoutException
+        elif status in ErrorCode.UNKNOWN_ERROR:
+            exception_class = WebDriverException
+        elif status in ErrorCode.UNEXPECTED_ALERT_OPEN:
+            exception_class = UnexpectedAlertPresentException
+        elif status in ErrorCode.NO_ALERT_OPEN:
+            exception_class = NoAlertPresentException
+        elif status in ErrorCode.IME_NOT_AVAILABLE:
+            exception_class = ImeNotAvailableException
+        elif status in ErrorCode.IME_ENGINE_ACTIVATION_FAILED:
+            exception_class = ImeActivationFailedException
+        elif status in ErrorCode.MOVE_TARGET_OUT_OF_BOUNDS:
+            exception_class = MoveTargetOutOfBoundsException
+        elif status in ErrorCode.JAVASCRIPT_ERROR:
+            exception_class = JavascriptException
+        elif status in ErrorCode.SESSION_NOT_CREATED:
+            exception_class = SessionNotCreatedException
+        elif status in ErrorCode.INVALID_ARGUMENT:
+            exception_class = InvalidArgumentException
+        elif status in ErrorCode.NO_SUCH_COOKIE:
+            exception_class = NoSuchCookieException
+        elif status in ErrorCode.UNABLE_TO_CAPTURE_SCREEN:
+            exception_class = ScreenshotException
+        elif status in ErrorCode.ELEMENT_CLICK_INTERCEPTED:
+            exception_class = ElementClickInterceptedException
+        elif status in ErrorCode.INSECURE_CERTIFICATE:
+            exception_class = InsecureCertificateException
+        elif status in ErrorCode.INVALID_COORDINATES:
+            exception_class = InvalidCoordinatesException
+        elif status in ErrorCode.INVALID_SESSION_ID:
+            exception_class = InvalidSessionIdException
+        elif status in ErrorCode.UNKNOWN_METHOD:
+            exception_class = UnknownMethodException
+        else:
+            exception_class = WebDriverException
+        if not value:
+            value = response['value']
+        if isinstance(value, str):
+            raise exception_class(value)
+        if message == "" and 'message' in value:
+            message = value['message']
+
+        screen = None  # type: ignore[assignment]
+        if 'screen' in value:
+            screen = value['screen']
+
+        stacktrace = None
+        st_value = value.get('stackTrace') or value.get('stacktrace')
+        if st_value:
+            if isinstance(st_value, str):
+                stacktrace = st_value.split('\n')
+            else:
+                stacktrace = []
+                try:
+                    for frame in st_value:
+                        line = self._value_or_default(frame, 'lineNumber', '')
+                        file = self._value_or_default(frame, 'fileName', '<anonymous>')
+                        if line:
+                            file = "%s:%s" % (file, line)
+                        meth = self._value_or_default(frame, 'methodName', '<anonymous>')
+                        if 'className' in frame:
+                            meth = "%s.%s" % (frame['className'], meth)
+                        msg = "    at %s (%s)"
+                        msg = msg % (meth, file)
+                        stacktrace.append(msg)
+                except TypeError:
+                    pass
+        if exception_class == UnexpectedAlertPresentException:
+            alert_text = None
+            if 'data' in value:
+                alert_text = value['data'].get('text')
+            elif 'alert' in value:
+                alert_text = value['alert'].get('text')
+            raise exception_class(message, screen, stacktrace, alert_text)  # type: ignore[call-arg]  # mypy is not smart enough here
+>       raise exception_class(message, screen, stacktrace)
+E       selenium.common.exceptions.NoSuchElementException: Message: Unable to locate element: [id="maintable"]
+E       Stacktrace:
+E       RemoteError@chrome://remote/content/shared/RemoteError.jsm:12:1
+E       WebDriverError@chrome://remote/content/shared/webdriver/Errors.jsm:192:5
+E       NoSuchElementError@chrome://remote/content/shared/webdriver/Errors.jsm:404:5
+E       element.find/</<@chrome://remote/content/marionette/element.js:291:16
+
+..\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py:247: NoSuchElementException
 
 test_phones.py::test_phones_on_contact_view_page FAILED                  [ 66%]
 test_phones.py:12 (test_phones_on_contact_view_page)
-app = <fixture.application.Application object at 0x000002127964AC50>
+app = <fixture.application.Application object at 0x000001F76321ACE0>
 
     def test_phones_on_contact_view_page(app):
->       contact_from_view_page = app.contact.get_contact_from_view_page(0)
+        contact_from_view_page = app.contact.get_contact_from_view_page(0)
+>       contact_from_edit_page = app.contact.get_contact_info_from_edit_page(0)
 
-test_phones.py:14:
+test_phones.py:15:
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-self = <fixture.contact.ContactHelper object at 0x0000021279649ED0>, index = 0
+self = <fixture.contact.ContactHelper object at 0x000001F763219BD0>, index = 0
 
-    def get_contact_from_view_page(self, index):
+    def get_contact_info_from_edit_page(self, index):
+        #wd = self.app.wd
+        #table = wd.find_element_by_id("maintable")
+        #row = table.find_elements_by_tag_name("tr")[index + 1]
+        #cols = row.find_elements_by_tag_name("td")
+        #cols[7].click()
         wd = self.app.wd
-        self.open_contact_view_by_index(index)
-        text=wd.find_element_by_id("content").text
-        homephone = re.search("H: (.*)", text).group(1) if "H: " in text else ""
-        workphone = re.search("W: (.*)", text).group(1) if "W: " in text else ""
-        mobilephone = re.search("M: (.*)", text).group(1) if "M: " in text else ""
-        secondaryphone = re.search("P: (.*)", text).group(1) if "P: " in text else ""
-        content=wd.find_element_by_id("content")
-        emails=[i.text for  i in content.find_elements_by_tag_name("a")]
-        while len(emails)<3:
-            emails.append("")
-        self.return_to_contact()
->       return Contact(home=homephone, mobile=mobilephone,
-                       work=workphone,  phone2=secondaryphone,email1 = emails[0], email2 = emails[1], email3 = emails[2])
-E       TypeError: Contact.__init__() got an unexpected keyword argument 'home'
+        self.app.open_home_page()
+>       self.find_edit_button_by_index(index)
+E       AttributeError: 'ContactHelper' object has no attribute 'find_edit_button_by_index'
 
-..\fixture\contact.py:133: TypeError
+..\fixture\contact.py:152: AttributeError
 
 test_phones.py::test_phones_on_home_page_db FAILED                       [100%]
 test_phones.py:20 (test_phones_on_home_page_db)
-app = <fixture.application.Application object at 0x000002127964AC50>
-db = <fixture.db.DbFixture object at 0x0000021279649060>
+app = <fixture.application.Application object at 0x000001F76321ACE0>
+db = <fixture.db.DbFixture object at 0x000001F76319F550>
 
     def test_phones_on_home_page_db(app, db):
 >       contacts_from_home_page = app.contact.get_contact_list()
@@ -88,7 +216,7 @@ db = <fixture.db.DbFixture object at 0x0000021279649060>
 test_phones.py:22:
 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
-self = <fixture.contact.ContactHelper object at 0x0000021279649ED0>
+self = <fixture.contact.ContactHelper object at 0x000001F763219BD0>
 
     def get_contact_list(self):
         if self.contact_cache is not None:
@@ -110,15 +238,22 @@ self = <fixture.contact.ContactHelper object at 0x0000021279649ED0>
             email1 = all_emails[0] if len(all_emails) > 0 else ""
             email2 = all_emails[1] if len(all_emails) > 1 else ""
             email3 = all_emails[2] if len(all_emails) > 2 else ""
->           l.append(Contact(id=id, firstname=cells[2].text, lastname=cells[1].text, all_emails_from_home_page=cells[4].text,
-                             home=homephone, mobile=mobilephone,work=workphone,all_phones_from_home_page=cells[5].text,
-                             phone2=secondaryphone, email1 = email1, email2 = email2, email3 = email3 ,address=cells[3].text))
-E           TypeError: Contact.__init__() got an unexpected keyword argument 'home'
+            l.append(Contact(id=id, firstname=cells[2].text, lastname=cells[1].text, all_emails_from_home_page=cells[4].text,
+                             phone_home=homephone, mobile_home=mobilephone, phone_work=workphone, all_phones_from_home_page=cells[5].text,
+                             phone_home_2=secondaryphone, email_1=email1, email_2=email2, email_3=email3, address_2=cells[3].text))
 
-..\fixture\contact.py:60: TypeError
+                        #l.append(Contact(id=id, firstname=cells[2].text, lastname=cells[1].text, all_emails_from_home_page=cells[4].text,
+                        #home=homephone, mobile=mobilephone,work=workphone,all_phones_from_home_page=cells[5].text,
+                        #phone2=secondaryphone, email1 = email1, email2 = email2, email3 = email3 ,address=cells[3].text))
+                        #home=home, mobile=mobile, work="", fax=""))#
+
+            f = open("test.txt", 'wb+')
+>       f.write(''.join(l))
+E       TypeError: sequence item 0: expected str instance, Contact found
+
+..\fixture\contact.py:70: TypeError
 
 
-================== 3 failed, 31 warnings in 75.83s (0:01:15) ==================
+================= 3 failed, 374 warnings in 161.70s (0:02:41) =================
 
 Process finished with exit code 1
-

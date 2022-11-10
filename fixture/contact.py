@@ -58,11 +58,15 @@ class ContactHelper:
             email2 = all_emails[1] if len(all_emails) > 1 else ""
             email3 = all_emails[2] if len(all_emails) > 2 else ""
             l.append(Contact(id=id, firstname=cells[2].text, lastname=cells[1].text, all_emails_from_home_page=cells[4].text,
-                             home=homephone, mobile=mobilephone,work=workphone,all_phones_from_home_page=cells[5].text,
-                             phone2=secondaryphone, email1 = email1, email2 = email2, email3 = email3 ,address=cells[3].text))
-                             #home=home, mobile=mobile, work="", fax=""))#
+                             phone_home=homephone, mobile_home=mobilephone, phone_work=workphone, all_phones_from_home_page=cells[5].text,
+                             phone_home_2=secondaryphone, email_1=email1, email_2=email2, email_3=email3, address_2=cells[3].text))
 
-        f = open("test.txt", 'wb+')
+                        #l.append(Contact(id=id, firstname=cells[2].text, lastname=cells[1].text, all_emails_from_home_page=cells[4].text,
+                        #home=homephone, mobile=mobilephone,work=workphone,all_phones_from_home_page=cells[5].text,
+                        #phone2=secondaryphone, email1 = email1, email2 = email2, email3 = email3 ,address=cells[3].text))
+                        #home=home, mobile=mobile, work="", fax=""))#
+
+            f = open("test.txt", 'wb+')
         f.write(''.join(l))
         f.close()
         self.contact_cache = l
@@ -130,9 +134,12 @@ class ContactHelper:
         while len(emails)<3:
             emails.append("")
         self.return_to_contact()
-        return Contact(home=homephone, mobile=mobilephone,
-                       work=workphone,  phone2=secondaryphone,email1 = emails[0], email2 = emails[1], email3 = emails[2])
+        return Contact(phone_home=homephone, mobile_home=mobilephone,
+                       phone_work=workphone,  phone_home_2=secondaryphone, email_1=emails[0], email_2=emails[1],
+                       email_3=emails[2])
 
+        #return Contact(home=homephone, mobile=mobilephone,#
+                       #work=workphone,  phone2=secondaryphone,email1 = emails[0], email2 = emails[1], email3 = emails[2])#
 
     def get_contact_info_from_edit_page(self, index):
         #wd = self.app.wd
