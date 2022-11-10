@@ -2,6 +2,7 @@ C:\Users\j_ryadnova\PycharmProjects\training\venv\Scripts\python.exe "C:\Program
 Testing started at 10:01 ...
 Launching pytest with arguments C:/Users/j_ryadnova/PycharmProjects/training/test/test_phones.py --no-header --no-summary -q in C:\Users\j_ryadnova\PycharmProjects\training\test
 
+
 ============================= test session starts =============================
 collecting ... collected 3 items
 
